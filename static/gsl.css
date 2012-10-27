@@ -1,0 +1,52 @@
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin-top: 0;
+}
+
+body {
+    background-image: url('pinstripe.png');
+    margin: 0;
+    padding: 0;
+}
+
+div#everything {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+div#leftbar {
+    height: 100%;
+    width: 20%;
+    background-color: #0a258c;
+}
+
+div#leftbar img {
+    height: 95%;
+    margin-top: 10px;
+    margin-left: 15%;
+}
+
+
+
+div.infobox {
+    background-color: white;
+    border: 1px solid rgb(50, 50, 50);
+    width: 35%;
+    height: 35%;
+    position: absolute;
+}
+
+div#lakeObsBox {
+    top: 10%;
+    left: 10%;
+}
