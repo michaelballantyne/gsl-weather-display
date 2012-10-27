@@ -33,7 +33,7 @@ div#leftbar {
 div#leftbar img {
     height: 95%;
     margin-top: 10px;
-    margin-left: 15%;
+    margin-left: 5%;
 }
 
 
@@ -41,12 +41,30 @@ div#leftbar img {
 div.infobox {
     background-color: white;
     border: 1px solid rgb(50, 50, 50);
-    width: 35%;
-    height: 35%;
+    width: 42.5%;
+    height: 42.5%;
     position: absolute;
+    -moz-box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
 }
 
 div#lakeObsBox {
-    top: 10%;
-    left: 10%;
+    top: 5%;
+    left: 5%;
+}
+
+div#hatObsBox {
+    top: 52.5%;
+    left: 5%;
+}
+
+div#lakeGraphBox {
+    top: 5%;
+    left: 52.5%;
+}
+
+div#radarBox {
+    top: 52.5%;
+    left: 52.5%;
 }
