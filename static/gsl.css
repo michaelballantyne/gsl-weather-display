@@ -1,0 +1,70 @@
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin-top: 0;
+}
+
+body {
+    background-image: url('pinstripe.png');
+    margin: 0;
+    padding: 0;
+}
+
+div#everything {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+div#leftbar {
+    height: 100%;
+    width: 20%;
+    background-color: #0a258c;
+}
+
+div#leftbar img {
+    height: 95%;
+    margin-top: 10px;
+    margin-left: 5%;
+}
+
+
+
+div.infobox {
+    background-color: white;
+    border: 1px solid rgb(50, 50, 50);
+    width: 42.5%;
+    height: 42.5%;
+    position: absolute;
+    -moz-box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+div#lakeObsBox {
+    top: 5%;
+    left: 5%;
+}
+
+div#hatObsBox {
+    top: 52.5%;
+    left: 5%;
+}
+
+div#lakeGraphBox {
+    top: 5%;
+    left: 52.5%;
+}
+
+div#radarBox {
+    top: 52.5%;
+    left: 52.5%;
+}
