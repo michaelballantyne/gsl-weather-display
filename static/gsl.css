@@ -1,70 +1,119 @@
 
+/* General Page Setup */
+
 div {
     margin: 0;
     padding: 0;
 }
 
-p {
-    margin-top: 0;
+p, h1, h2, h4, h5, h6 {
+    margin-top: 0;  /* For bizarre layout reasons. */
 }
 
 body {
-    background-image: url('pinstripe.png');
+    background-color: #5d5d5d;
     margin: 0;
     padding: 0;
+    font-family: 'Helvetica', 'Helvetica Neue', 'Neue Helvetica', 'Arial', 'Trebuchet';
+    color: white;
 }
 
 div#everything {
     width: 100%;
     height: 100%;
+    min-width: 960px;
+    min-height: 720px;
     position: absolute;
     top: 0;
     left: 0;
 }
 
-
-
-div#leftbar {
+div#ltitle {
+    width: 8%;
     height: 100%;
-    width: 20%;
-    background-color: #0a258c;
-}
-
-div#leftbar img {
-    height: 95%;
-    margin-top: 10px;
-    margin-left: 5%;
-}
-
-
-
-div.infobox {
-    background-color: white;
-    border: 1px solid rgb(50, 50, 50);
-    width: 42.5%;
-    height: 42.5%;
     position: absolute;
-    -moz-box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    top: 0; left: 0;
+    background-color: #0da2d3;
+    overflow: hidden;
 }
 
-div#lakeObsBox {
-    top: 5%;
-    left: 5%;
+div#ltitle img {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: -2em;
 }
 
-div#hatObsBox {
-    top: 52.5%;
-    left: 5%;
+div#contentArea {
+    width: 92%;
+    height: 100%;
+    position: absolute;
+    top: 0; right: 0;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.7);
 }
 
-div#lakeGraphBox {
-    top: 5%;
-    left: 52.5%;
+div#contentFrame {
+    width: 95%;
+    height: 95%;
+    position: absolute;
+    top: 2.5%;
+    left: 2.5%;
 }
+
+
+
+div#boxrowTop {
+    width: 100%;
+    height: 61.803398875%;
+    /* min-height: 550px; */
+}
+
+div#boxrowBottom {
+    width: 100%;
+    background-color: #901070;
+}
+
+
 
 div#radarBox {
-    top: 52.5%;
-    left: 52.5%;
+    height: 100%;
+    /* Width determined by image autosizing */
+    float: right;
 }
+
+div#radarBox img {
+    height: 100%;
+}
+
+div#boxOne h3 {
+    margin-top: 0;
+}
+
+h3 {
+    text-align: center;
+}
+
+div#boxTwo, div#boxThree {
+    width: 49%;
+    height: 100%;
+    float: left;
+}
+
+div#boxTwo {
+    margin-right: 1%;
+}
+
+div#boxThree {
+    margin-left: 1%;
+}
+
+
+
+
+
+
+/*     background-color: #0e7aac; */
+
+
+

@@ -6,8 +6,10 @@
 <head>
 	
 	<meta charset="utf-8"/>
-	<title>Great Salt Lake Information</title>
+	<title>Great Salt Lake Weather Information</title>
 	<link href="static/gsl.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="static/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="static/gsl-util.js"></script>
 	
 	<!-- Right now, this is just a test file. -->
 	<!-- We'll fill in the dynamic data later. -->
@@ -18,31 +20,63 @@
 
 <body>
 
-<div id="everything">
-
-<div id="leftbar">
-    <img src="static/pageTitle.png" alt="Great Salt Lake Weather Information" />
-</div>
+<div id="everything"> <!-- Absolutely, positively everything on the page. -->
 
 
-<div class="infobox" id="lakeObsBox">
+
+<div id="ltitle">
+    <img src="static/pageTitle.png" alt="Great Salt Lake" />
+</div> <!-- /div#ltitle -->
+
+
+
+<div id="contentArea">
+    <div id="contentFrame">
     
-</div>
-
-<div class="infobox" id="hatObsBox">
     
-</div>
-
-<div class="infobox" id="lakeGraphBox">
+    <div id="boxrowTop">
+        
+        
+        <div id="radarBox">
+            <p><img src="http://radar.weather.gov/lite/NCR/MTX_loop.gif" alt="Recent Radar Information" /></p>
+        </div>
+        
+        <div id="mtitle">
+            <h1>Weather &amp; Information</h1>
+        </div>
+        
+        <div id="boxOne">
+            <h3>Lake Levels</h3>
+            
+            <div>
+            <p>[graphp]</p>
+            </div>
+        </div>
+        
+        
+    </div> <!-- /div#boxrowTop -->
     
-</div>
-
-<div class="infobox" id="radarBox">
     
-</div>
-
-
-
+    
+    <div id="boxrowBottom">
+        
+        
+        <div id="boxTwo">
+            <h3>Marina</h3>
+            <p id="boxTwoDims"></p>
+        </div>
+        
+        <div id="boxThree">
+            <h3>Hat Island</h3>
+            <p id="boxThreeDims"></p>
+        </div>
+        
+        
+    </div> <!-- /div#boxrowBottom -->
+    
+    
+    </div> <!-- /div#contentFrame -->
+</div> <!-- /div#contentArea -->
 
 
 
