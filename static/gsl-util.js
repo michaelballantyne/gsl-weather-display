@@ -83,5 +83,5 @@ $("#boxTwoDims").html("" + b2width + " x " + b2height);
 $("#boxThreeDims").html("" + b3width + " x " + b3height);
 
 var a = new Ico.LineGraph($('#graph')[0], {saline: lakedata.saline, saltair: lakedata.saltair}, {
-    width: 500, height: 300, stroke_width: "0", markers: "circle", marker_size: "2", labels: lakedata.labels});
+    width: 500, height: 300, stroke_width: "0", markers: "circle", marker_size: "2", labels: lakedata.labels, colours: {saline: "#6000BC", saltair: "#AD1F00"}});
 

@@ -52,7 +52,16 @@
         <div id="boxOne">
             <h3>Lake Levels</h3>
             
-            <div id="graph">
+            <div id="graphcontainer">
+                <h2>Lake Level in Feet Over Time</h2>
+                <div id="graph">
+                </div>
+                <div id="legend">
+                    <ul>
+                        <li class="south"><span>South arm</span></li>
+                        <li class="north"><span>North arm</span></li>
+                    </ul>
+                </div>
             </div>
         </div>
         
@@ -62,15 +71,18 @@
     
     
     <div id="boxrowBottom">
-        
-        
         <div id="boxTwo">
-            <h3>Marina</h3>
-            <p id="boxTwoDims"></p>
-        </div>
-        
+            <h4>Current Elevation</h4>
+            <p>South Arm Elevation: {{ leveldata['current_saltair'] }} Feet</p>
+            <p>North Arm Elevation: {{ leveldata['current_saline'] }} Feet</p>
+            <h4>Historic High Elevation</h4>
+            <p>South Arm Elevation: 4,211.6 Feet, Jun 3, 1986</p>
+            <p>North Arm Elevation: 4,211.20 Feet, Apr. 7-29, 1987</p>
+            <h4>Historic Low Elevation</h4>
+            <p>South Arm Elevation: 4,191.4 Feet, Nov 1, 1963</p>
+            <p>North Arm Elevation: 4,192.40 Feet, Oct 26, 2010</p>
+        </div>        
         <div id="boxThree">
-            <h3>Hat Island</h3>
             <p id="boxThreeDims"></p>
         </div>
         

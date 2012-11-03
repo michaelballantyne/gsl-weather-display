@@ -90,6 +90,24 @@ div#boxOne h3 {
     margin-top: 0;
 }
 
+div#legend li.south {
+    color: #AD1F00;
+}
+
+div#legend li.north {
+    color: #6000BC;
+}
+
+div#legend span {
+    color: black;
+}
+
+div#graphcontainer {
+    background-color: white;
+    color: black;
+    padding: 5px;
+}
+
 h3 {
     text-align: center;
 }
