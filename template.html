@@ -7,14 +7,13 @@
 	<link href="static/gsl.css" rel="stylesheet" type="text/css" />
 
         <script type="text/javascript">
-            var lakedata = {{ lakedata }};
+            var lakedata = {{ leveldata['graphjson'] }};
         </script>
 
         <script type="text/javascript" src="static/jquery-1.8.2.min.js"></script>
-        <script type="text/javascript" src="raphael-min.js"></script>
-        <script type="text/javascript" src="ico.js"></script>
+        <script type="text/javascript" src="static/raphael-min.js"></script>
+        <script type="text/javascript" src="static/ico.js"></script>
 
-	<script type="text/javascript" src="static/gsl-util.js"></script>
 	
 	<!-- Right now, this is just a test file. -->
 	<!-- We'll fill in the dynamic data later. -->
@@ -86,6 +85,7 @@
 
 
 </div> <!-- /div#everything -->
+	<script type="text/javascript" src="static/gsl-util.js"></script>
 
 </body>
 </html>

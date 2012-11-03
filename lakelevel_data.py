@@ -1,5 +1,4 @@
 import urllib2, json, re
-from jinja2 import Environment, FileSystemLoader
 from math import ceil
 
 def takespread(sequence, num):
@@ -24,9 +23,7 @@ def get_levels_site_series(site, days=119):
 
     return result
 
-def get_levels_json():
-    sites_data = {"saltair": get_levels_site_series("10010000"),
-            "saline": get_levels_site_series("10010100")}
+def get_levels_json(sites_data):
 
     common_dates = sorted(reduce(lambda s, t: s.intersection(t), (set(site_data.keys()) for site_data in sites_data.values())))
 
@@ -42,7 +39,11 @@ def get_levels_json():
 
     return json.dumps(result_data)
 
-if __name__ == "__main__":
-    env = Environment(loader=FileSystemLoader("."))
-    tmpl = env.get_template("graphtest.html")
-    print tmpl.render(data=get_levels_json())
+def get_data():
+    result = {}
+    sites_data = {"saltair": get_levels_site_series("10010000"),
+            "saline": get_levels_site_series("10010100")}
+
+    result["graphjson"] = get_levels_json(sites_data)
+
+    return result
