@@ -23,10 +23,7 @@ def get_levels_site_series(site, days=119):
 
     return result
 
-def get_levels_json(sites_data):
-
-    common_dates = sorted(reduce(lambda s, t: s.intersection(t), (set(site_data.keys()) for site_data in sites_data.values())))
-
+def get_levels_json(sites_data, common_dates):
     result_data = {}
     for site in sites_data.keys():
         result_data[site] = takespread([sites_data[site][date] for date in common_dates], 3000)
@@ -44,6 +41,11 @@ def get_data():
     sites_data = {"saltair": get_levels_site_series("10010000"),
             "saline": get_levels_site_series("10010100")}
 
-    result["graphjson"] = get_levels_json(sites_data)
+    common_dates = sorted(reduce(lambda s, t: s.intersection(t), (set(site_data.keys()) for site_data in sites_data.values())))
+
+    result["graphjson"] = get_levels_json(sites_data, common_dates)
+    
+    result["current_saline"] = str(sites_data["saline"][common_dates[-1]])
+    result["current_saltair"] = str(sites_data["saltair"][common_dates[-1]])
 
     return result
