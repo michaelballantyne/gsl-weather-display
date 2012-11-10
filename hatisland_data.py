@@ -1,11 +1,14 @@
 import re
 import urllib2 
+import csv
 from datetime import datetime
 
 '''
 LOOK OUT!
 This script currently accesses the datapoints in the wrong order.
 This is being fixed.
+
+authors: Zach, Talis, Michael, Adair, Derek
 '''
 
 def get_data():
@@ -19,30 +22,34 @@ def get_data():
     html = re.split('[\\r\\n]{1,2}', htmlText)
 
     csvStart = 0
-    csvEnd = 0
-
+    csv_text = []
     for lineNo, line in enumerate(html):
-        if "<PRE>" in line:
-            csvStart = lineNo + 3
-            while ",," in html[csvStart] and csvStart < len(html):
+        if "PARM = " in line:
+            csvStart = lineNo + 1
+            csv_text.append(line[7:])
+            while "</PRE>" not in html[csvStart] and csvStart < len(html):
+                if len(html[csvStart]) > 0 and ",," not in html[csvStart]:
+                    csv_text.append(html[csvStart])
                 csvStart += 1
 
-        if "</PRE>" in line:
-            csvEnd = lineNo
-
-    html = html[csvStart:csvEnd]
-    
-    if len(html) < 1:
+    if len(csv_text) < 2:
         # OMG GO NUTS
         return None
     
     
-    currentData = re.split(',', html[0])
-    hatisland_data['temp_f'] = float(currentData[6])
-    hatisland_data['temp_c'] = celsiusify( float(currentData[6]) )
-    hatisland_data['wind_speed'] = float(currentData[9])
-    hatisland_data['wind_direction'] = meaningful_direction( float(currentData[8]) )
-    hatisland_data['gust'] = float(currentData[7])
+    param = re.split(',', csv_text[0])
+    temp_f_idx = param.index('TMPF')
+    wind_idx = param.index('SKNT')
+    gust_idx = param.index('GUST')
+    drct_idx = param.index('DRCT')
+
+    
+    latest_data = re.split(',',csv_text[1])
+    hatisland_data['temp_f'] = float(latest_data[temp_f_idx])
+    hatisland_data['temp_c'] = celsiusify( float(latest_data[temp_f_idx]) )
+    hatisland_data['wind_speed'] = float(latest_data[wind_idx])
+    hatisland_data['wind_direction'] = meaningful_direction( float(latest_data[drct_idx]) )
+    hatisland_data['gust'] = float(latest_data[gust_idx])
     # Add last (current) time
     
     high_temp_f = hatisland_data['temp_f']
@@ -50,14 +57,14 @@ def get_data():
     high_gust = hatisland_data['gust']
     
     # Calc. Maxima/Minima:
-    for csv_entry in html[1:]:
+    for csv_entry in csv_text[1:]:
         data = re.split(',', csv_entry)
-        thisTemp = data[6]
+        thisTemp = data[temp_f_idx]
         
         # Inefficient. That's OK.
         high_temp_f = happy_max(high_temp_f, thisTemp)
         low_temp_f = happy_min(low_temp_f, thisTemp)
-        high_gust = happy_max(high_gust, data[7])
+        high_gust = happy_max(high_gust, data[gust_idx])
         
     high_temp_c = celsiusify(high_temp_f)
     low_temp_c = celsiusify(low_temp_f)
@@ -99,5 +106,9 @@ wind_directions = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW',
 
 def meaningful_direction(wind_degrees):
     adjusted_degrees = (wind_degrees + 11.25) % 360
-    direction_index = int(adjusted_degrees / 16)
+    direction_index = int(adjusted_degrees / 22.5)
     return wind_directions[direction_index]
+
+print "makeshift main"
+get_data()
+
