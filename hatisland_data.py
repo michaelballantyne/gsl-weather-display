@@ -4,10 +4,6 @@ import csv
 from datetime import datetime
 
 '''
-LOOK OUT!
-This script currently accesses the datapoints in the wrong order.
-This is being fixed.
-
 authors: Zach, Talis, Michael, Adair, Derek
 '''
 
