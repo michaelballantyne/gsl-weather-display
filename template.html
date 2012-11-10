@@ -13,10 +13,7 @@
         <script type="text/javascript" src="static/jquery-1.8.2.min.js"></script>
         <script type="text/javascript" src="static/raphael-min.js"></script>
         <script type="text/javascript" src="static/ico.js"></script>
-
-	
-	<!-- Right now, this is just a test file. -->
-	<!-- We'll fill in the dynamic data later. -->
+		
 </head>
 
 
@@ -38,56 +35,64 @@
     <div id="contentFrame">
     
     
+	<h1 id="mtitle">Weather &amp; Information</h1>
+	
+    
     <div id="boxrowTop">
+        <div id="boxTwo">
+            <h3>Current Lake Elevation</h3>
+            <div class="dataRow">South Arm Elevation: {{ leveldata['current_saltair'] }} Feet</div>
+            <div class="dataRow">North Arm Elevation: {{ leveldata['current_saline'] }} Feet</div>
+            <div class="dataRow"><h4>Historic High Elevation</h4></div>
+            <div class="dataRow">South Arm Elevation: 4,211.6 Feet, Jun 3, 1986</div>
+            <div class="dataRow">North Arm Elevation: 4,211.20 Feet, Apr. 7-29, 1987</div>
+            <div class="dataRow"><h4>Historic Low Elevation</h4></div>
+            <div class="dataRow">South Arm Elevation: 4,191.4 Feet, Nov 1, 1963</div>
+            <div class="dataRow">North Arm Elevation: 4,192.40 Feet, Oct 26, 2010</div>
+        </div>        
+        <div id="boxThree">
+			<h3>Current Weather</h3>
+			<div class="dataRow">Air Temp:</div>
+			<div class="dataRow">Wind:</div>
+			<div class="dataRow">Gust:</div>
+        </div>
+        <div class="clear">
+        &nbsp;
+        </div>
+        
+	</div>
+        
+    
+    
+    
+    <div id="boxrowBottom">
         
         
         <div id="radarBox">
-            <p><img src="http://radar.weather.gov/lite/NCR/MTX_loop.gif" alt="Recent Radar Information" /></p>
+            <img src="http://radar.weather.gov/lite/NCR/MTX_loop.gif" alt="Recent Radar Information" />
         </div>
         
-        <div id="mtitle">
-            <h1>Weather &amp; Information</h1>
-        </div>
-        
+
         <div id="boxOne">
-            <h3>Lake Levels</h3>
+            <h3 id="graphtitle">Historic Lake Elevation (Feet)</h3>
             
             <div id="graphcontainer">
-                <h2>Lake Level in Feet Over Time</h2>
-                <div id="graph">
-                </div>
                 <div id="legend">
                     <ul>
                         <li class="south"><span>South arm</span></li>
                         <li class="north"><span>North arm</span></li>
                     </ul>
                 </div>
+                <div id="graph">
+                </div>
             </div>
         </div>
         
-        
-    </div> <!-- /div#boxrowTop -->
-    
-    
-    
-    <div id="boxrowBottom">
-        <div id="boxTwo">
-            <h4>Current Elevation</h4>
-            <p>South Arm Elevation: {{ leveldata['current_saltair'] }} Feet</p>
-            <p>North Arm Elevation: {{ leveldata['current_saline'] }} Feet</p>
-            <h4>Historic High Elevation</h4>
-            <p>South Arm Elevation: 4,211.6 Feet, Jun 3, 1986</p>
-            <p>North Arm Elevation: 4,211.20 Feet, Apr. 7-29, 1987</p>
-            <h4>Historic Low Elevation</h4>
-            <p>South Arm Elevation: 4,191.4 Feet, Nov 1, 1963</p>
-            <p>North Arm Elevation: 4,192.40 Feet, Oct 26, 2010</p>
-        </div>        
-        <div id="boxThree">
-            <p id="boxThreeDims"></p>
+        <div class="clear">
+        &nbsp;
         </div>
         
-        
-    </div> <!-- /div#boxrowBottom -->
+    </div> <!-- /div#boxrowTop -->
     
     
     </div> <!-- /div#contentFrame -->
