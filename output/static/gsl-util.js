@@ -74,19 +74,29 @@ Ico.Normaliser.prototype = {
 };
 
 frame = $('#contentFrame'); 
-radar = $('#radarBox');
+radarBox = $('#radarBox');
+radarImg = $('#radarBox img');
 graph = $('#graph');
 
-var spaceDiff = frame.outerHeight() - radar.offset().top;
-radar.height(spaceDiff);
+var spaceDiff = frame.outerHeight() - radarImg.offset().top;
+radarImg.height(spaceDiff);
 
 
-var rightBoxBottomOffset = radar.offset().top + radar.outerHeight();
+var rightBoxBottomOffset = radarBox.offset().top + radarBox.outerHeight();
 var oldExtra = graph.outerHeight() - graph.height();
 var newOuterHeight = rightBoxBottomOffset - graph.offset().top;
 var newHeight = newOuterHeight - oldExtra - 8;
 
 
 var a = new Ico.LineGraph($('#graph')[0], {saline: lakedata.saline, saltair: lakedata.saltair}, {
-    width: $('#graph').width(), height: newHeight, stroke_width: "0", markers: "circle", marker_size: "2", labels: lakedata.labels, colours: {saline: "#6000BC", saltair: "#AD1F00"}});
+    width: $('#graph').width(), 
+    height: newHeight,
+    stroke_width: "1",
+    curve_amount: 0,
+    labels: lakedata.labels,
+    colours: {
+        saline: "#6000BC",
+        saltair: "#AD1F00"
+    }
+});
 
