@@ -12,7 +12,8 @@ def ensure_directory_exists(path):
             raise
 
 def html(data):
-    jinja_env = Environment(loader=FileSystemLoader("."))
+    cwd = os.path.dirname(os.path.realpath(__file__)) 
+    jinja_env = Environment(loader=FileSystemLoader(cwd))
     gsl_template = jinja_env.get_template("template.html")
     return gsl_template.render(data)
 
