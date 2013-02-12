@@ -66,5 +66,5 @@ if __name__ == "__main__":
 
 
     if not args.nogenerate:
-        out = open(os.path.join(cwd, "output", "out.html"), "w")
+        out = open(os.path.join(cwd, "output", "index.html"), "w")
         out.write(html(data))
