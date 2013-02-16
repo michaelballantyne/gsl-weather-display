@@ -73,30 +73,84 @@ Ico.Normaliser.prototype = {
     }
 };
 
-frame = $('#contentFrame'); 
-radarBox = $('#radarBox');
-radarImg = $('#radarBox img');
-graph = $('#graph');
 
-var spaceDiff = frame.outerHeight() - radarImg.offset().top;
-radarImg.height(spaceDiff);
+var debounce = function (threshold, func) {
+    var timeout;
+    return function debounced () {
+        var obj = this, 
+            args = arguments; 
+        function delayed () {
+            func.apply(obj, args); 
+            timeout = null; 
+        };
+        if (timeout)
+            clearTimeout(timeout);
+        timeout = setTimeout(delayed, threshold || 100); 
+    };
+}
 
+var size = function() {
+    screenh = $(window).height();
+    screenw = $(window).width();
+    twocol = screenw >= 1000;
 
-var rightBoxBottomOffset = radarBox.offset().top + radarBox.outerHeight();
-var oldExtra = graph.outerHeight() - graph.height();
-var newOuterHeight = rightBoxBottomOffset - graph.offset().top;
-var newHeight = newOuterHeight - oldExtra - 8;
+    graph = $('#graph');
+    graphbox = $('#levelbox');
 
+    gaddh = screenh - (graphbox.offset().top + graphbox.outerHeight())
 
-var a = new Ico.LineGraph($('#graph')[0], {saline: lakedata.saline, saltair: lakedata.saltair}, {
-    width: $('#graph').width(), 
-    height: newHeight,
-    stroke_width: "1",
-    curve_amount: 0,
-    labels: lakedata.labels,
-    colours: {
-        saline: "#6000BC",
-        saltair: "#AD1F00"
+    if (twocol) {
+        leftover = 20;
+    } else {
+        leftover = 80;
     }
-});
 
+    gnewh = graph.height() + gaddh - leftover;
+
+    minGraphHeight = 300;
+    if (gnewh < minGraphHeight) {
+        gnewh = minGraphHeight;
+    }
+
+    graph.height(gnewh);
+
+    if (twocol) {
+        setTimeout(function() {
+        radarbox = $('#radarbox')
+        radarimg = $('#radarbox img')
+        
+        radarbox.css('marginTop', 0);
+        
+        bottom = screenh - leftover;
+        raddh = bottom - (radarbox.offset().top + radarbox.outerHeight())
+
+        if (raddh > 0) {
+            radarbox.css('marginTop', raddh);
+        }
+        }, 50);
+    }
+}
+
+
+var createGraph = function() {
+    $('#graph').html('');
+    new Ico.LineGraph($('#graph')[0], {saline: lakedata.saline, saltair: lakedata.saltair}, {
+        stroke_width: "1",
+        curve_amount: 0,
+        labels: lakedata.labels,
+        colours: {
+            saline: "#AD1F00",
+            saltair: "#2a9338"
+        }
+    });
+}
+
+$(window).load(function() {
+    size();
+    createGraph();
+
+    $(window).resize(debounce(250, function() {
+        size();
+        createGraph();
+    }));
+});

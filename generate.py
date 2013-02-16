@@ -54,8 +54,9 @@ if __name__ == "__main__":
                 if args.save:
                     for index, item in enumerate(datafilesets[key]):
                         savefilename = os.path.join(data_dir, key + str(index))
-                        savefile = open(savefilename, "w")
-                        shutil.copyfileobj(item, savefile)
+                        with open(savefilename, "w") as savefile:
+                            shutil.copyfileobj(item, savefile)
+                        datafilesets[key][index] = open(savefilename)
 
         for provider in providers:
             data[provider.get_key()] = provider.process_data(datafilesets[provider.get_key()])
