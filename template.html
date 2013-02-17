@@ -25,7 +25,7 @@
                 <div id="levelcolumn">
                     <div id="leveltext">
 
-                        <h3>Lake Elevations</h3>
+                        <h3>Lake Elevation</h3>
                         <table cellspacing="0">
                             <tr>
                                 <th></th>
@@ -54,9 +54,6 @@
                                 <td>Oct 26, 2010</td>
                             </tr>
                         </table>
-
-
-
                     </div>        
 
                     <div id="levelbox">
@@ -79,44 +76,41 @@
                     <div id="weathertext">
                         <h3>Weather (as of {{ hatisland['date'] }})</h3>
 
-<table class="weather left" cellspacing="0">
-    <tr>
-        <th class="caption" colspan="2">Current</th>
-    </tr>
-    <tr>
-        <th>Air Temp</th>
-        <td>{{ hatisland['temp_f'] }} F / {{ hatisland['temp_c'] }} C</td>
-    </tr>
-    <tr>
-        <th>Wind</th>
-        <td>{{ hatisland['wind_speed'] }} mph</td>
-    </tr>
-    <tr>
-        <th>Gust</th>
-        <td>{{ hatisland['gust'] }} mph</td>
-    </tr>
-</table>
-<table class="weather" cellspacing="0">
-    <tr>
-        <th class="caption" colspan="2">24 Hour Period</th>
-    </tr>
-    <tr>
-        <th>High Temp</th>
-        <td>{{ hatisland['high_temp_f'] }} F / {{ hatisland['high_temp_c'] }} C</td>
-    </tr>
-    <tr>
-        <th>Low Temp</th>
-        <td>{{ hatisland['low_temp_f'] }} F / {{ hatisland['low_temp_c'] }} C</td>
-    </tr>
-    <tr>
-        <th>High Gust</th>
-        <td>{{ hatisland['high_gust'] }} mph</td>
-    </tr>
-</table>
+                        <table class="weather left" cellspacing="0">
+                            <tr>
+                                <th class="caption" colspan="2">Current</th>
+                            </tr>
+                            <tr>
+                                <th>Air Temp</th>
+                                <td>{{ hatisland['temp_f'] }} F / {{ hatisland['temp_c'] }} C</td>
+                            </tr>
+                            <tr>
+                                <th>Wind</th>
+                                <td>{{ hatisland['wind_speed'] }} mph</td>
+                            </tr>
+                            <tr>
+                                <th>Gust</th>
+                                <td>{{ hatisland['gust'] }} mph</td>
+                            </tr>
+                        </table>
+                        <table class="weather" cellspacing="0">
+                            <tr>
+                                <th class="caption" colspan="2">Last 24 Hours</th>
+                            </tr>
+                            <tr>
+                                <th>High Temp</th>
+                                <td>{{ hatisland['high_temp_f'] }} F / {{ hatisland['high_temp_c'] }} C</td>
+                            </tr>
+                            <tr>
+                                <th>Low Temp</th>
+                                <td>{{ hatisland['low_temp_f'] }} F / {{ hatisland['low_temp_c'] }} C</td>
+                            </tr>
+                            <tr>
+                                <th>High Gust</th>
+                                <td>{{ hatisland['high_gust'] }} mph</td>
+                            </tr>
+                        </table>
 
-                        <!--<div>High Temp: {{ hatisland['high_temp_f'] }} F / {{ hatisland['high_temp_c'] }} C</div>-->
-                        <!--<div>Low Temp: {{ hatisland['low_temp_f'] }} F / {{ hatisland['low_temp_c'] }} C</div>-->
-                        <!--<div>High Gust: {{ hatisland['high_gust'] }} mph</div>-->
                     </div>
                     <div id="radarbox">
                         <h3>Salt Lake City, UT Radar Base Reflectivity</h3>
