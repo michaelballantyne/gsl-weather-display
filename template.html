@@ -20,103 +20,105 @@
             <div id="ltitle">
                 <img src="static/pageTitle.png" alt="Great Salt Lake" />
             </div>
+            <div id="contentFrame">
+                <!--<div id="error">An error occured and the data shown is out of date. Please contact person at number.</div>-->
+                <div id="contentArea">
+                    <div id="levelcolumn">
+                        <div id="leveltext">
 
-            <div id="contentArea">
-                <div id="levelcolumn">
-                    <div id="leveltext">
+                            <h3>Lake Elevation</h3>
+                            <table cellspacing="0">
+                                <tr>
+                                    <th></th>
+                                    <th>South Arm</th>
+                                    <th class="sub">Date</th>
+                                    <th>North Arm</th>
+                                    <th class="sub">Date</th>
+                                </tr>
+                                <tr>
+                                    <th>Current</th>
+                                    <td colspan="2">{{ leveldata['current_saltair'] }} Feet</td>
+                                    <td colspan="2">{{ leveldata['current_saline'] }} Feet</td>
+                                </tr>
+                                <tr>
+                                    <th>Historic High</th>
+                                    <td>4,211.6 Feet</td>
+                                    <td>Jun 3, 1986</td>
+                                    <td>4,211.20 Feet</td>
+                                    <td>Apr. 7-29, 1987</td>
+                                </tr>
+                                <tr>
+                                    <th>Historic Low</th>
+                                    <td>4,191.4 Feet</td>
+                                    <td>Nov 1, 1963</td>
+                                    <td>4,192.40 Feet</td>
+                                    <td>Oct 26, 2010</td>
+                                </tr>
+                            </table>
+                        </div>        
 
-                        <h3>Lake Elevation</h3>
-                        <table cellspacing="0">
-                            <tr>
-                                <th></th>
-                                <th>South Arm</th>
-                                <th class="sub">Date</th>
-                                <th>North Arm</th>
-                                <th class="sub">Date</th>
-                            </tr>
-                            <tr>
-                                <th>Current</th>
-                                <td colspan="2">{{ leveldata['current_saltair'] }} Feet</td>
-                                <td colspan="2">{{ leveldata['current_saline'] }} Feet</td>
-                            </tr>
-                            <tr>
-                                <th>Historic High</th>
-                                <td>4,211.6 Feet</td>
-                                <td>Jun 3, 1986</td>
-                                <td>4,211.20 Feet</td>
-                                <td>Apr. 7-29, 1987</td>
-                            </tr>
-                            <tr>
-                                <th>Historic Low</th>
-                                <td>4,191.4 Feet</td>
-                                <td>Nov 1, 1963</td>
-                                <td>4,192.40 Feet</td>
-                                <td>Oct 26, 2010</td>
-                            </tr>
-                        </table>
-                    </div>        
+                        <div id="levelbox">
+                            <h3 id="graphtitle">Lake Elevation above NGVD 1929, feet</h3>
 
-                    <div id="levelbox">
-                        <h3 id="graphtitle">Lake Elevation above NGVD 1929, feet</h3>
-
-                        <div id="graphcontainer">
-                            <div id="legend">
-                                <ul>
-                                    <li class="south"><span>South Arm</span></li>
-                                    <li class="north"><span>North Arm</span></li>
-                                </ul>
-                            </div>
-                            <div id="graph">
+                            <div id="graphcontainer">
+                                <div id="legend">
+                                    <ul>
+                                        <li class="south"><span>South Arm</span></li>
+                                        <li class="north"><span>North Arm</span></li>
+                                    </ul>
+                                </div>
+                                <div id="graph">
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <div id="weathercolumn">
+                        <div id="weathertext">
+                            <h3>Weather (as of {{ hatisland['date'] }})</h3>
+
+                            <table class="weather left" cellspacing="0">
+                                <tr>
+                                    <th class="caption" colspan="2">Current</th>
+                                </tr>
+                                <tr>
+                                    <th>Air Temp</th>
+                                    <td>{{ hatisland['temp_f'] }} F / {{ hatisland['temp_c'] }} C</td>
+                                </tr>
+                                <tr>
+                                    <th>Wind</th>
+                                    <td>{{ hatisland['wind_speed'] }} mph</td>
+                                </tr>
+                                <tr>
+                                    <th>Gust</th>
+                                    <td>{{ hatisland['gust'] }} mph</td>
+                                </tr>
+                            </table>
+                            <table class="weather" cellspacing="0">
+                                <tr>
+                                    <th class="caption" colspan="2">Last 24 Hours</th>
+                                </tr>
+                                <tr>
+                                    <th>High Temp</th>
+                                    <td>{{ hatisland['high_temp_f'] }} F / {{ hatisland['high_temp_c'] }} C</td>
+                                </tr>
+                                <tr>
+                                    <th>Low Temp</th>
+                                    <td>{{ hatisland['low_temp_f'] }} F / {{ hatisland['low_temp_c'] }} C</td>
+                                </tr>
+                                <tr>
+                                    <th>High Gust</th>
+                                    <td>{{ hatisland['high_gust'] }} mph</td>
+                                </tr>
+                            </table>
+
+                        </div>
+                        <div id="radarbox">
+                            <h3>Salt Lake City, UT Radar Base Reflectivity</h3>
+                            <img src="http://radar.weather.gov/lite/NCR/MTX_loop.gif" alt="Recent Radar Information" />
+                        </div>
+                    </div>    
                 </div>
-
-                <div id="weathercolumn">
-                    <div id="weathertext">
-                        <h3>Weather (as of {{ hatisland['date'] }})</h3>
-
-                        <table class="weather left" cellspacing="0">
-                            <tr>
-                                <th class="caption" colspan="2">Current</th>
-                            </tr>
-                            <tr>
-                                <th>Air Temp</th>
-                                <td>{{ hatisland['temp_f'] }} F / {{ hatisland['temp_c'] }} C</td>
-                            </tr>
-                            <tr>
-                                <th>Wind</th>
-                                <td>{{ hatisland['wind_speed'] }} mph</td>
-                            </tr>
-                            <tr>
-                                <th>Gust</th>
-                                <td>{{ hatisland['gust'] }} mph</td>
-                            </tr>
-                        </table>
-                        <table class="weather" cellspacing="0">
-                            <tr>
-                                <th class="caption" colspan="2">Last 24 Hours</th>
-                            </tr>
-                            <tr>
-                                <th>High Temp</th>
-                                <td>{{ hatisland['high_temp_f'] }} F / {{ hatisland['high_temp_c'] }} C</td>
-                            </tr>
-                            <tr>
-                                <th>Low Temp</th>
-                                <td>{{ hatisland['low_temp_f'] }} F / {{ hatisland['low_temp_c'] }} C</td>
-                            </tr>
-                            <tr>
-                                <th>High Gust</th>
-                                <td>{{ hatisland['high_gust'] }} mph</td>
-                            </tr>
-                        </table>
-
-                    </div>
-                    <div id="radarbox">
-                        <h3>Salt Lake City, UT Radar Base Reflectivity</h3>
-                        <img src="http://radar.weather.gov/lite/NCR/MTX_loop.gif" alt="Recent Radar Information" />
-                    </div>
-                </div>    
             </div>
         </div>
     </body>

@@ -45,15 +45,18 @@ div#ltitle:after {
 }
 
 
-div#contentArea {
+div#contentFrame {
     width: 90%;
-    height: 100%;
     margin: 0;
     position: absolute;
-    top: 0; right: 0;
+    right: 0;
     margin-right: 10px;
+}
+
+div#contentArea {
     visibility: hidden;
 }
+
 
 div#weathercolumn {
     padding-bottom: 20px;
@@ -67,20 +70,20 @@ div#levelcolumn {
     padding-right: 20px;
 }
 
-div#levelbox {
+div#levelbox.twocol {
     margin-top: 3em;
 }
 
 div#levelcolumn.twocol {
     position: absolute;
-    top: 0; left: 0;
+    left: 0;
     right: 45%;
     padding: 20px;
 }
 
 div#weathercolumn.twocol {
     position: absolute;
-    top: 0; right: 0;
+    right: 0;
     left: 55%;
     padding: 20px;
 }
@@ -91,9 +94,12 @@ div#radarbox {
 
 div#radarbox img {
     width: 85%;
+    display: block;
+}
+
+div#radarbox.twocol img {
     margin-right: auto;
     margin-left: auto;
-    display: block;
 }
 
 div.clear {
@@ -129,20 +135,36 @@ div#graphcontainer {
     padding: 5px;
 }
 
-h3 {
+h3.twocol {
     text-align: center;
 }
 
-table {
+h3.onecol {
+    margin-top: 2em;
+}
+
+table.onecol {
 }
 td {
     background-color: #4F4F4F;
     padding: 8px;
     border: 1px solid #474747;
 }
+
+
+
 th {
     text-align: left;
     padding: 8px;
+}
+tr:first-child th {
+    border-bottom: 1px solid black;
+}
+th:first-child {
+    border-right: 1px solid black;
+}
+th:last-child {
+    border-right: none;
 }
 
 table.weather td, table.weather th {
@@ -165,4 +187,13 @@ th.sub {
 }
 th.caption {
     text-align: center;
+}
+
+div#error {
+    background-color: red;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-radius: 3px;
+    margin-top: 1em;
 }

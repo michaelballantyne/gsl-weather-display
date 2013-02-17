@@ -98,11 +98,11 @@ var size = function() {
 
     // Apply or remove classes that create the two column layout.
     if (twocol) {
-        $('#levelcolumn').addClass('twocol')
-        $('#weathercolumn').addClass('twocol')
+        $('*').removeClass('onecol');
+        $('*').addClass('twocol');
     } else {
-        $('#levelcolumn').removeClass('twocol')
-        $('#weathercolumn').removeClass('twocol')
+        $('*').removeClass('twocol');
+        $('*').addClass('onecol');
     }
 
     var graph = $('#graph');
