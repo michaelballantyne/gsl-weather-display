@@ -15,7 +15,6 @@ body {
 div#everything {
     width: 100%;
     height: 100%;
-    min-height: 720px;
     position: absolute;
     top: 0;
     left: 0;
@@ -53,25 +52,32 @@ div#contentArea {
     position: absolute;
     top: 0; right: 0;
     margin-right: 10px;
+    visibility: hidden;
 }
 
 div#weathercolumn {
     padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
-@media screen and (min-width: 1000px) {
-    div#levelcolumn {
-        position: absolute;
-        top: 0; left: 0;
-        right: 45%;
-        padding: 20px;
-    }
 
-    div#weathercolumn {
-        position: absolute;
-        top: 0; right: 0;
-        left: 55%;
-        padding 20px;
-    }
+div#levelcolumn {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+div#levelcolumn.twocol {
+    position: absolute;
+    top: 0; left: 0;
+    right: 45%;
+    padding: 20px;
+}
+
+div#weathercolumn.twocol {
+    position: absolute;
+    top: 0; right: 0;
+    left: 55%;
+    padding: 20px;
 }
 
 div#radarbox {
@@ -92,7 +98,7 @@ div.clear {
 
 
 div#graph {
-    margin-right: 8em;
+    margin-right: 9em;
 }
 
 div#legend {
