@@ -66,6 +66,10 @@ div#levelcolumn {
     padding-right: 20px;
 }
 
+div#levelbox {
+    margin-top: 3em;
+}
+
 div#levelcolumn.twocol {
     position: absolute;
     top: 0; left: 0;
@@ -125,5 +129,39 @@ div#graphcontainer {
 }
 
 h3 {
+    text-align: center;
+}
+
+table {
+}
+td {
+    background-color: #4F4F4F;
+    padding: 8px;
+    border: 1px solid #474747;
+}
+th {
+    text-align: left;
+    padding: 8px;
+}
+
+table.weather td, table.weather th {
+}
+
+table.weather {
+    display: inline-block;
+}
+
+th.sub {
+    font-weight: normal;
+}
+.left {
+    float: left;
+    margin-right: 2em;
+}
+
+.clear {
+    clear: both;
+}
+th.caption {
     text-align: center;
 }
