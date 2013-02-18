@@ -54,7 +54,6 @@ div#contentFrame {
 }
 
 div#contentArea {
-    visibility: hidden;
 }
 
 
@@ -102,7 +101,7 @@ div#radarbox.twocol img {
     margin-left: auto;
 }
 
-div.clear {
+.clear {
     clear: both;
     height: 0;
 }
@@ -137,21 +136,18 @@ div#graphcontainer {
 
 h3.twocol {
     text-align: center;
+    margin-top: 0em;
 }
 
-h3.onecol {
+h3 {
     margin-top: 2em;
 }
 
-table.onecol {
-}
 td {
     background-color: #4F4F4F;
     padding: 8px;
     border: 1px solid #474747;
 }
-
-
 
 th {
     text-align: left;

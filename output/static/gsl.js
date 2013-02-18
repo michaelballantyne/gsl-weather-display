@@ -1,29 +1,10 @@
-
-Ico.Normalizer = Ico.Normaliser = function(data, options) {
-    this.options = {
-        start_value: null
-    };
-
-    if (typeof options !== 'undefined') {
-        this.options = options;
-    }
-
-    this.min = Helpers.min(data);
-    this.max = this.options.max || Helpers.max(data);
-    this.standard_deviation = Helpers.standard_deviation(data);
-    this.range = 0;
-    this.step = this.labelStep(this.max - this.min);
-    this.start_value = this.calculateStart();
-    this.process();
-};
-
+// The standard Ico Normalizer didn't use much of the vertical space available to it with the sort
+// of data we are graphing, so we modify it. Because we do these modifications, we use the non-minified
+// version of Ico.
 Ico.Normaliser.prototype = {
-    /**
-     * Calculates the start value.  This is often 0.
-     * @returns {Float} The start value 
-     */
     calculateStart: function() {
         var min = typeof this.options.start_value !== 'undefined' && this.min >= 0 ? this.options.start_value : this.min,
+        // we'll have the graph start one step below our data
         start_value = min - this.step;
 
         /* This is a boundary condition */
@@ -54,20 +35,12 @@ Ico.Normaliser.prototype = {
         return roundedValue;
     },
 
-    /**
-     * Calculates the range and step values.
-     */
     process: function() {
         this.range = this.max - this.start_value;
         this.step = this.labelStep(this.range);
     },
 
-    /**
-     * Calculates the label step value.
-     *
-     * @param {Float} value A value to convert to a label position
-     * @returns {Float} The rounded label step result
-     */
+    // Use 8 vertical labels.
     labelStep: function(value) {
         return value / 8;
     }
@@ -89,6 +62,7 @@ var debounce = function (threshold, func) {
     };
 }
 
+// Apply layout.
 var size = function() {
     var screenh = $(window).height();
     var screenw = $(window).width();
@@ -98,11 +72,9 @@ var size = function() {
 
     // Apply or remove classes that create the two column layout.
     if (twocol) {
-        $('*').removeClass('onecol');
         $('*').addClass('twocol');
     } else {
         $('*').removeClass('twocol');
-        $('*').addClass('onecol');
     }
 
     var graph = $('#graph');
@@ -170,10 +142,24 @@ var createGraph = function() {
     $('#graph div').css('overflow', 'visible')
 }
 
+// Show an error if when the page is loaded, the data provided is more than 15 minutes out of date.
+var checkdate = function() {
+    // getTime provides milliseconds from UTC epoch. Our generated time is in seconds since the epoch, so divide by 1000.
+    var current = (new Date()).getTime() / 1000;
+    var difference = current - generated;
+    if (difference > 900) {
+        if ($('#error').length == 0) {
+            $('#contentFrame').prepend('<div id="error">' + errormsg + '</div>');
+        }
+    }
+}
+
 // We need the radar image to be loaded so that its dimensions are known
 // to the layout engine before we try and lay the page out, so wait
 // till onLoad rather than use jQuery's DOM ready.
 $(window).load(function() {
+    checkdate();
+
     size();
 
     // The content starts out hidden so that the user doesn't see it draw

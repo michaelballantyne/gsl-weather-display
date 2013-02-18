@@ -7,6 +7,10 @@
 
         <script type="text/javascript">
             var lakedata = {{ leveldata['graphjson'] }};
+            // Store epoch-second time of generation of the page so we can compare to display time and alert if it is out of date.
+            var generated = {{ generated }};
+            // In case the client needs to show an error, we save the error message configured on the server.
+            var errormsg = "{{ errormsg }}";
         </script>
 
         <script type="text/javascript" src="static/jquery-1.8.2.min.js"></script>
@@ -17,15 +21,19 @@
 
     <body>
         <div id="everything">
-            <div id="ltitle">
+            <div id="ltitle" role="banner">
                 <img src="static/pageTitle.png" alt="Great Salt Lake" />
             </div>
             <div id="contentFrame">
-                <!--<div id="error">An error occured and the data shown is out of date. Please contact person at number.</div>-->
-                <div id="contentArea">
+                <!--show any server generated error message-->
+                {% if showerror %}
+                <div id="error">{{ errormsg }}</div>
+                {% endif %}
+                <div id="contentArea" role="main">
+                    <!--Start hidden so users don't see re-layout, but only on browsers with JS enabled.-->
+                    <script type="text/javascript">$("div#contentArea").css('visibility', 'hidden')</script>
                     <div id="levelcolumn">
                         <div id="leveltext">
-
                             <h3>Lake Elevation</h3>
                             <table cellspacing="0">
                                 <tr>
@@ -68,6 +76,11 @@
                                     </ul>
                                 </div>
                                 <div id="graph">
+                                    <noscript>
+                                        <p>This graph requires JavaScript to display.</p>
+                                        <!-- So that the white box still surrounds the key -->
+                                        <div class="clear"></div>
+                                    </noscript>
                                 </div>
                             </div>
                         </div>
@@ -115,7 +128,7 @@
                         </div>
                         <div id="radarbox">
                             <h3>Salt Lake City, UT Radar Base Reflectivity</h3>
-                            <img src="http://radar.weather.gov/lite/NCR/MTX_loop.gif" alt="Recent Radar Information" />
+                            <img alt="Radar Image" src="http://radar.weather.gov/lite/NCR/MTX_loop.gif" alt="Recent Radar Information" />
                         </div>
                     </div>    
                 </div>

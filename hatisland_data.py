@@ -4,7 +4,7 @@ from abstractdata import DataProvider
 from datetime import datetime
 
 '''
-authors: Zach, Talis, Michael, Adair, Derek
+authors: Zach, Talus, Michael, Adair, Derek
 '''
 
 class WeatherDataProvider(DataProvider):
@@ -62,17 +62,15 @@ class WeatherDataProvider(DataProvider):
         hatisland_data['date'] = latest_data[year_idx] + '-' + latest_data[mon_idx] + '-' + latest_data[day_idx] + ' ' + latest_data[hr_idx] + ':' + latest_data[min_idx] + ' ' + latest_data[tmzn_idx]
 
         # Add last (current) time
-        
         high_temp_f = hatisland_data['temp_f']
         low_temp_f = high_temp_f
         high_gust = hatisland_data['gust']
         
-        # Calc. Maxima/Minima:
+        # Calculate maxima/minima:
         for csv_entry in csv_text[1:]:
             data = re.split(',', csv_entry)
             thisTemp = data[temp_f_idx]
             
-            # Inefficient. That's OK.
             high_temp_f = self.happy_max(high_temp_f, thisTemp)
             low_temp_f = self.happy_min(low_temp_f, thisTemp)
             high_gust = self.happy_max(high_gust, data[gust_idx])
