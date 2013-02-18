@@ -31,3 +31,19 @@ An important design goal was to ensure that the app would never display out of d
 In the face of the failure of a datasource, the program will generate a page containing the data from the last successful run (as recorded in processed.json) along with an error message indicating the data is out of date (or as otherwise specified by command line options).
 
 The generated web page includes javascript that compares the time of page load with the time of page generation and displays the same error message as above if they differ by more than 15 minutes (this error may be incorrect if the client computer's clock is set incorrectly).
+
+### Shortcomings
+The script does not currently support email notification on failure.
+
+The lake level data file for the two sites is about 1mb, and is downloaded in its entirety on each refresh. Running every 5 minutes that's 228mb of data per day, or 8gb per month, most of it redundant. It would be better to only download new data, but 8gb / mo isn't a huge deal.
+
+## License
+This work is public domain. Third party libraries included in this repository fall under their own licences, of course.
+
+## Contributors
+Code was contributed by:
+* Zachary Morin
+* Derek Gallegos
+* Adair Kovac
+* Talus Baddley
+* Michael Ballantyne
