@@ -18,7 +18,7 @@ The main program is generate.py. It downloads necessary data out creates the fil
 1. Ensure dependencies are installed, either system wide or in a virtual env
 2. Check out the repository
 3. Test generate.py, then create a cron job to run it (every 5 minutes is expected)
-4. Point a web server at the output directory (symlink, alias, virtualhost, etc)
+4. Point a web server at the output directory (symlink, alias, virtualhost, etc). Ensure the server provides a cache-control header that provides a max-age for the index.html file.
 
 ## Architecture
 This script is designed to run periodically by a cron job, because no interactivity is required and the data sources used are only updated approximately every 15 minutes.
