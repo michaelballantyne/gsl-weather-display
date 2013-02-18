@@ -19,30 +19,13 @@ Ico.Normaliser.prototype = {
         return start_value;
     },
 
-    /* Given a value, this method rounds it to the nearest good value for an origin */
-    round: function(value, offset) {
-        offset = offset || 1;
-        var roundedValue = value;
-
-        if (this.standard_deviation > 0.1) {
-            var multiplier = Math.pow(10, -offset);
-            roundedValue = Math.round(value * multiplier) / multiplier;
-
-            if (roundedValue > this.min) {
-                return this.round(value - this.step);
-            }
-        }
-        return roundedValue;
-    },
-
     process: function() {
         this.range = this.max - this.start_value;
         this.step = this.labelStep(this.range);
     },
 
-    // Use 8 vertical labels.
     labelStep: function(value) {
-        return value / 8;
+        return 0.2
     }
 };
 
