@@ -1,6 +1,8 @@
 # gsl-weather-display
 Web page for display at the Great Salt Lake Marina showing weather and lake level information.
 
+Live on a test site at: http://gslweather.no-ip.org/
+
 ## Installation and Use
 A Chef cookbook is available at https://github.com/michaelballantyne/chef-gsl/
 
@@ -19,6 +21,11 @@ The main program is generate.py. It downloads necessary data out creates the fil
 2. Check out the repository
 3. Test generate.py, then create a cron job to run it (every 5 minutes is expected)
 4. Point a web server at the output directory (symlink, alias, virtualhost, etc). Ensure the server provides a cache-control header that provides a max-age for the index.html file.
+
+### Browser Support
+Tested in IE 7-9, Chrome, Safari and Firefox. Earlier versions of IE don't handle the shadow on the left and have some minor issues with table borders, but nothing breaking.
+
+The graph is drawn in JavaScript, so it will be missing if it is turned off. The two column layout is also only available with JavaScript.
 
 ## Architecture
 This script is designed to run periodically by a cron job, because no interactivity is required and the data sources used are only updated approximately every 15 minutes.
