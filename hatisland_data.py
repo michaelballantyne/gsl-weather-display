@@ -1,11 +1,37 @@
-import re
-import urllib2 
+import urllib2, csv
 from abstractdata import DataProvider
 from datetime import datetime
 
-'''
-authors: Zach, Talus, Michael, Adair, Derek
-'''
+# File object wrapper that filters out the non-csv portions of the MesoWest data format
+class MesoWestFile:
+    def __init__(self, f):
+        self.f = f
+        self.csvstarted = False
+
+    def next(self):
+        line = self.f.next()
+        
+        # If we're still looking for the header...
+        if not self.csvstarted:
+            # Data has header with column names after "PARM = "
+            while not line.startswith('PARM = '):
+                line = self.f.next()
+
+            # Return the column names as a line for csv parsing
+            line = line.split('=')[1].strip()
+
+            # We're into the body of the CSV now
+            self.csvstarted = True
+
+        # Skip any blank lines and the ending </pre> tag.
+        while line.strip() == '' or line.strip().lower() == '</pre>':
+            line = self.f.next()
+
+        return line
+
+    def __iter__(self):
+        return self
+
 
 class WeatherDataProvider(DataProvider):
     def get_key(self):
@@ -20,93 +46,48 @@ class WeatherDataProvider(DataProvider):
     def process_data(self, data):
         hatisland_data = {}
 
-        htmlText = data[0].read()
-        html = re.split('[\\r\\n]{1,2}', htmlText)
-
-        csvStart = 0
-        csv_text = []
-        for lineNo, line in enumerate(html):
-            if "PARM = " in line:
-                csvStart = lineNo + 1
-                csv_text.append(line[7:])
-                while "</PRE>" not in html[csvStart] and csvStart < len(html):
-                    if len(html[csvStart]) > 0 and ",," not in html[csvStart]:
-                        csv_text.append(html[csvStart])
-                    csvStart += 1
-
-        if len(csv_text) < 2:
-            raise Exception("no data found in file!")
+        csvfile = csv.DictReader(MesoWestFile(data[0]), skipinitialspace=True)
         
-        param = re.split(',', csv_text[0])
-        temp_f_idx = param.index('TMPF')
-        wind_idx = param.index('SKNT')
-        gust_idx = param.index('GUST')
-        drct_idx = param.index('DRCT')
-
-        mon_idx = param.index('MON')
-        day_idx = param.index('DAY')
-        year_idx = param.index('YEAR')
-        hr_idx = param.index('HR')
-        min_idx = param.index('MIN')
-        tmzn_idx = param.index('TMZN')
-
+        # We requested the data to be sorted most recent first in our url above.
+        latest_data = csvfile.next()
         
-        latest_data = re.split(',',csv_text[1])
+        # Variable descriptions here: http://mesowest.utah.edu/cgi-bin/droman/variable_units_select.cgi?unit=0
+        current_temp_f = float(latest_data['TMPF'])
+        hatisland_data['temp_f'] = current_temp_f
+        hatisland_data['temp_c'] = self.f_to_c(current_temp_f)
 
-        hatisland_data['temp_f'] = float(latest_data[temp_f_idx])
-        hatisland_data['temp_c'] = self.celsiusify( float(latest_data[temp_f_idx]) )
-        hatisland_data['wind_speed'] = float(latest_data[wind_idx])
-        hatisland_data['wind_direction'] = self.meaningful_direction( float(latest_data[drct_idx]) )
-        hatisland_data['gust'] = float(latest_data[gust_idx])
+        hatisland_data['wind_speed'] = float(latest_data['SKNT'])
+        hatisland_data['wind_direction'] = self.meaningful_direction(float(latest_data['DRCT']))
 
-        hatisland_data['date'] = latest_data[year_idx] + '-' + latest_data[mon_idx] + '-' + latest_data[day_idx] + ' ' + latest_data[hr_idx] + ':' + latest_data[min_idx] + ' ' + latest_data[tmzn_idx]
+        current_gust = float(latest_data['GUST'])
+        hatisland_data['gust'] = current_gust
 
-        # Add last (current) time
-        high_temp_f = hatisland_data['temp_f']
-        low_temp_f = high_temp_f
-        high_gust = hatisland_data['gust']
+        hatisland_data['date'] = latest_data['YEAR'] + '-' + latest_data['MON'] + '-' + latest_data['DAY'] + ' ' + latest_data['HR'] + ':' + latest_data['MIN'] + ' ' + latest_data['TMZN']
+
+        # Start with current values.
+        high_temp_f = current_temp_f
+        low_temp_f = current_temp_f
+        high_gust = current_gust 
         
-        # Calculate maxima/minima:
-        for csv_entry in csv_text[1:]:
-            data = re.split(',', csv_entry)
-            thisTemp = data[temp_f_idx]
+        # Calculate maxima/minima.
+        for data in csvfile:
+            thisTemp = float(data['TMPF'])
+            high_temp_f = max(high_temp_f, thisTemp)
+            low_temp_f = min(low_temp_f, thisTemp)
             
-            high_temp_f = self.happy_max(high_temp_f, thisTemp)
-            low_temp_f = self.happy_min(low_temp_f, thisTemp)
-            high_gust = self.happy_max(high_gust, data[gust_idx])
-            
-        high_temp_c = self.celsiusify(high_temp_f)
-        low_temp_c = self.celsiusify(low_temp_f)
-        
+            high_gust = max(high_gust, float(data['GUST']))
+
         hatisland_data['high_temp_f'] = high_temp_f
         hatisland_data['low_temp_f'] = low_temp_f
-        hatisland_data['high_temp_c'] = high_temp_c
-        hatisland_data['low_temp_c'] = low_temp_c
+        hatisland_data['high_temp_c'] = self.f_to_c(high_temp_f)
+        hatisland_data['low_temp_c'] = self.f_to_c(low_temp_f)
         hatisland_data['high_gust'] = high_gust
         
         return hatisland_data
 
-    def happy_max(self, current, test_str):
-        # happy because it doesn't complain if you give it erroneous values.
-        test_num = 0
-        try:
-            test_num = float(test_str)
-        except ValueError:
-            return current
-        return max(current, test_num)
-        
-        
-    def happy_min(self, current, test_str):
-        test_num = 0
-        try:
-            test_num = float(test_str)
-        except ValueError:
-            return current
-        return min(current, test_num)
-
-
-    def celsiusify(self, fahrenVal):
-        return round((fahrenVal - 32) * (5. / 9), 1)
+    # Convert number in farenheit to number in celcius with one place after the decimal.
+    def f_to_c(self, f_val):
+        return round((f_val - 32) * (5. / 9), 1)
 
     def meaningful_direction(self, wind_degrees):
         wind_directions = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW']

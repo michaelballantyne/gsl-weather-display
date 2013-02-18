@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import json, os, argparse, time, logging, logging.handlers
+import json, os, argparse, time, logging, logging.handlers, shutil
 from jinja2 import Environment, FileSystemLoader
 import lakelevel_data, hatisland_data
 
@@ -63,6 +63,13 @@ if __name__ == '__main__':
                 for provider in providers:
                     key = provider.get_key()
                     datafilesets[provider.get_key()] = provider.download_latest_data() 
+
+                    # Write files out to data folder, then reopen for reading. Useful to have them there for debugging.
+                    for index, item in enumerate(datafilesets[key]):
+                        savefilename = os.path.join(data_dir, key + str(index))
+                        with open(savefilename, "w") as savefile:
+                            shutil.copyfileobj(item, savefile)
+                        datafilesets[key][index] = open(savefilename)
 
                 # Ask providers to process data
                 for provider in providers:
