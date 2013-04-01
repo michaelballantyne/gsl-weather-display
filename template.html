@@ -267,22 +267,24 @@
                             <table cellspacing="0">
                                 <tr>
                                     <th></th>
-                                    <th>South Arm</th>
+                                    <th>Gilbert Bay</th>
                                     <th class="sub">Date</th>
-                                    <th>North Arm</th>
+                                    <th>Gunnison Bay</th>
                                     <th class="sub">Date</th>
                                 </tr>
                                 <tr>
                                     <th>Current</th>
-                                    <td colspan="2">{{ leveldata['current_saltair'] }} Feet</td>
-                                    <td colspan="2">{{ leveldata['current_saline'] }} Feet</td>
+                                    <td>{{ leveldata['current_saltair'] }} Feet</td>
+                                    <td>{{ leveldata['date'] }}</td>
+                                    <td>{{ leveldata['current_saline'] }} Feet</td>
+                                    <td>{{ leveldata['date'] }}</td>
                                 </tr>
                                 <tr>
                                     <th>Historic High</th>
                                     <td>4,211.6 Feet</td>
                                     <td>Jun 3, 1986</td>
                                     <td>4,211.20 Feet</td>
-                                    <td>Apr. 7-29, 1987</td>
+                                    <td>Apr 7-29, 1987</td>
                                 </tr>
                                 <tr>
                                     <th>Historic Low</th>
@@ -295,13 +297,13 @@
                         </div>        
 
                         <div id="levelbox">
-                            <h3 id="graphtitle">Lake Elevation above NGVD 1929, feet</h3>
+                            <h3 id="graphtitle">Lake Elevation Above Mean Sea Level, in Feet</h3>
 
                             <div id="graphcontainer">
                                 <div id="legend">
                                     <ul>
-                                        <li class="south"><span>South Arm</span></li>
-                                        <li class="north"><span>North Arm</span></li>
+                                        <li class="south"><span>Gilbert Bay</span></li>
+                                        <li class="north"><span>Gunnison Bay</span></li>
                                     </ul>
                                 </div>
                                 <div id="graph">
@@ -317,7 +319,7 @@
 
                     <div id="weathercolumn">
                         <div id="weathertext">
-                            <h3>Weather (as of {{ hatisland['date'] }})</h3>
+                            <h3>Weather from Hat Island Station (as of {{ hatisland['date'] }})</h3>
 
                             <table class="weather left" cellspacing="0">
                                 <tr>

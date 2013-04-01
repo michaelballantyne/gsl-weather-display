@@ -1,4 +1,4 @@
-import urllib2, json, csv
+import urllib2, json, csv, datetime
 from math import ceil
 from abstractdata import DataProvider
 
@@ -51,6 +51,11 @@ class LevelDataProvider(DataProvider):
         # Dates are sorted in ascending order, so common_dates[-1] should be the most recent.
         result["current_saline"] = str(sites_data["saline"][common_dates[-1]])
         result["current_saltair"] = str(sites_data["saltair"][common_dates[-1]])
+
+        level_date_str = common_dates[-1]
+        level_date = datetime.datetime.strptime(level_date_str, "%Y-%m-%d %H:%M")
+        result["date"] = level_date.strftime("%b %-d, %Y");
+        
 
         return result
     
