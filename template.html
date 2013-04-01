@@ -1,29 +1,258 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8"/>
-        <title>Great Salt Lake Weather Information</title>
-        <link href="static/gsl.css" rel="stylesheet" type="text/css" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0025)http://ut.water.usgs.gov/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>USGS Utah Water Science Center - Home page</title>
 
-        <script type="text/javascript">
-            var lakedata = {{ leveldata['graphjson'] }};
-            // Store epoch-second time of generation of the page so we can compare to display time and alert if it is out of date.
-            var generated = {{ generated }};
-            // In case the client needs to show an error, we save the error message configured on the server.
-            var errormsg = "{{ errormsg }}";
-        </script>
+<meta name="description" content="USGS Utah Water Science Center - Home page">
+<meta name="keywords" content="USGS,Utah,water,hydrology,stream,river,well,flow,surfacewater,groundwater,waterquality,pollution">
+<meta name="author" content="Sarah Walton">
+<meta name="publisher" content="USGS - U.S. Geological Survey">
+<meta name="created" content="20090331">
+<meta name="revised" content="20090331">
+<link href="./USGS Utah Water Science Center - Home page_files/common.css" rel="stylesheet" type="text/css">
+<link href="./USGS Utah Water Science Center - Home page_files/custom.css" rel="stylesheet" type="text/css">
+<link href="./USGS Utah Water Science Center - Home page_files/framework.css" rel="stylesheet" type="text/css">
+<link href="./USGS Utah Water Science Center - Home page_files/colormidblue.css" rel="stylesheet" type="text/css">
+<!-- <link href="/frameworkfiles/styles/colorthemes/leftgradients/colortan.css" rel="stylesheet" type="text/css"> -->
+<link href="./USGS Utah Water Science Center - Home page_files/ut.css" rel="stylesheet" type="text/css">
+<!-- <link href="/frameworkfiles/styles/media.css" rel="stylesheet" media="print" type="text/css"> --> 
+<style type="text/css">
+	#home { color: #ffc266; }
+	.highlightpub { padding: 4px;  background-color: #efeff5; }
+ 	#mainbody li ul li { list-style-image: url('/frameworkfiles/images/icons/dotcyan7.gif'); }
+</style>
+      <script type="text/javascript" async="" src="./USGS Utah Water Science Center - Home page_files/ga.js"></script><script type="text/javascript" async="" src="./USGS Utah Water Science Center - Home page_files/ga.js"></script><script type="text/javascript" src="./USGS Utah Water Science Center - Home page_files/usgs-analytics.js"></script><script src="./USGS Utah Water Science Center - Home page_files/foresee-trigger.js" type="text/javascript" defer=""></script><script src="./USGS Utah Water Science Center - Home page_files/federated-analytics.js" type="text/javascript" defer=""></script><script src="./USGS Utah Water Science Center - Home page_files/googleanalytics.js" type="text/javascript" defer=""></script><script src="./USGS Utah Water Science Center - Home page_files/usa-search.js" type="text/javascript" defer=""></script>
 
-        <script type="text/javascript" src="static/jquery-1.8.2.min.js"></script>
-        <script type="text/javascript" src="static/raphael-min.js"></script>
-        <script type="text/javascript" src="static/ico.js"></script>
-        <script type="text/javascript" src="static/gsl.js"></script>
-    </head>
+<script type="text/javascript" src="./USGS Utah Water Science Center - Home page_files/remote.loader.js"></script><script type="text/javascript" src="./USGS Utah Water Science Center - Home page_files/stats.js"></script>
 
-    <body>
-        <div id="everything">
-            <div id="ltitle" role="banner">
-                <img src="static/pageTitle.png" alt="Great Salt Lake" />
-            </div>
+<!-- Begin GSL Weather Monitoring Styles and Scripts -->
+<link href="static/gsl.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+    var lakedata = {{ leveldata['graphjson'] }};
+    // Store epoch-second time of generation of the page so we can compare to display time and alert if it is out of date.
+    var generated = {{ generated }};
+    // In case the client needs to show an error, we save the error message configured on the server.
+    var errormsg = "{{ errormsg }}";
+</script>
+
+<script type="text/javascript" src="static/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="static/raphael-min.js"></script>
+<script type="text/javascript" src="static/ico.js"></script>
+<script type="text/javascript" src="static/gsl.js"></script>
+<!-- End GSL Weather Monitoring Styles and Scripts -->
+
+</head>
+<body>
+
+<!-- START header and top navigation section -->
+	<!-- BEGIN USGS Header Template -->
+<div id="usgscolorband">
+	<div id="usgsbanner">
+		<div id="usgsidentifier"><a href="http://www.usgs.gov/"><img src="./USGS Utah Water Science Center - Home page_files/header_graphic_usgsIdentifier_white.jpg" alt="USGS - science for a changing world" title="U.S. Geological Survey Home Page" width="178" height="72"></a></div>
+		<div id="usgsccsabox">
+			<div id="usgsccsa">
+			  <br><a href="http://www.usgs.gov/">USGS Home</a>
+			  <br><a href="http://www.usgs.gov/ask/">Contact USGS</a>
+			  <br><a href="http://search.usgs.gov/">Search USGS</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="usgstitle">
+	<p>Utah Water Science Center</p>
+</div>
+<!-- END USGS Header Template -->
+
+	<a href="http://ut.water.usgs.gov/#skipnavmain" title="Skip main topics." name="topnavmainbuttons"></a>
+<div id="topnavbuttons">
+<ul id="navlist">
+<li><a href="./USGS Utah Water Science Center - Home page_files/USGS Utah Water Science Center - Home page.html" title="Home page of the Utah Water Science Center."><span id="home">home</span></a></li>
+<li><a href="http://ut.water.usgs.gov/infodata/"><span id="data">information/data</span></a></li>
+<li><a href="http://ut.water.usgs.gov/projects/"><span id="projects">projects</span></a></li>
+<li><a href="http://ut.water.usgs.gov/publications/"><span id="pubs">publications</span></a></li>
+<li><a href="http://ut.water.usgs.gov/drought/"><span id="drought">drought</span></a></li>
+<li><a href="http://ut.water.usgs.gov/flood/"><span id="flood">flood</span></a></li>
+<li><a href="http://ut.water.usgs.gov/nawqa/grsl/"><span id="nawqa">NAWQA</span></a></li>
+<li><a href="http://ut.water.usgs.gov/greatsaltlake/"><span id="gsl">Great Salt Lake</span></a></li>
+<li><a href="http://ut.water.usgs.gov/about/"><span id="about">about</span></a></li>
+<li><a href="http://answers.usgs.gov/cgi-bin/gsanswers?pemail=GS-W-UT_Web_Requests&subject=Contact+the+Utah+Water+Science+Center&viewnote=Utah+Water+Science+Center%3Cbr+/%3E2329+West+Orton+Circle%3Cbr+/%3EWest+Valley+City,+Utah+84119%3Cbr+/%3E(801)+908-5000&note=Generated+by+gsanswers+feedback+form." title="Contact the Utah Water Science Center." accesskey="c"><span id="contact">contact</span></a></li>
+
+</ul>
+<br class="clear">
+</div>
+<a name="skipnavmain"></a>
+<!-- END of header section -->
+
+<table id="contenttable" cellpadding="0" cellspacing="0" summary="">
+<tbody><tr>
+<!-- START left side bar section -->
+<td id="leftbar">
+		<img src="./USGS Utah Water Science Center - Home page_files/defaultpicture.jpg" alt="Default picture to show in the left pane. " width="200" height="115" title="Default picture to show in the left pane.">
+
+		 <!-- Google CSE Search Box Begins -->
+
+<form id="searchbox_005083607223377578371:b5ixbbpqpx0" action="http://search.usgs.gov/results.html" style="margin-top: 20px;">
+<input type="hidden" name="cx" value="005083607223377578371:b5ixbbpqpx0">
+<input type="hidden" name="cof" value="FORID:11">
+<label for="q"><span class="bold smaller blue">Search the Utah WSC:</span></label>
+<input name="q" id="q" type="text" size="15" accesskey="s" style="background-image: url(http://www.google.com/cse/intl/en/images/google_custom_search_watermark.gif); background-color: rgb(255, 255, 255); background-position: 0% 50%; background-repeat: no-repeat no-repeat;">
+<input type="hidden" name="as_oq" value="site:ut.water.usgs.gov">
+<input type="submit" name="sa" id="sa" value="Go">
+<input name="siteurl" type="hidden" value="ut.water.usgs.gov/"><input name="ref" type="hidden" value=""><input name="ss" type="hidden" value=""></form>
+
+<script type="text/javascript" src="./USGS Utah Water Science Center - Home page_files/brand"></script>
+
+<!--Google CSE Search Box Ends -->
+		<a href="http://ut.water.usgs.gov/#skipdata" title="Skip data center links." name="topdata"></a>
+<h2>DATA CENTER</h2>
+<ul>
+<li><a href="http://waterdata.usgs.gov/ut/nwis/rt/"><span class="boldsmaller">Real-time data</span></a>
+	<ul>
+		<li><a href="http://waterdata.usgs.gov/ut/nwis/current/?type=flow">Streamflow</a></li>
+		<li><a href="http://waterdata.usgs.gov/ut/nwis/current/?type=gw&group_key=county_cd">Groundwater</a></li>
+		<li><a href="http://waterdata.usgs.gov/ut/nwis/current/?type=quality&group%20Key=basin%20cd">Water quality</a></li>
+		<li><a href="http://waterdata.usgs.gov/ut/nwis/current?type=lake">Lake/Reservoir</a></li>
+	</ul></li>
+	</ul>
+
+<ul>
+<li><span class="boldsmaller">Historical data</span>
+	<ul>
+		<li><a href="http://waterdata.usgs.gov/ut/nwis/sw/">Streamflow</a></li>
+		<li><a href="http://waterdata.usgs.gov/ut/nwis/gw/">Groundwater</a></li>
+		<li><a href="http://waterdata.usgs.gov/ut/nwis/qw/">Water quality</a></li>
+		<li><a href="http://wdr.water.usgs.gov/" title="Annual data reports, offered in both a text and map interface">Annual Data Reports</a></li>
+		<li><a href="http://ut.water.usgs.gov/reports/ucr_monthly.html">Upper Colorado River Monthly Data Reports</a></li>
+		<li><a href="http://ida.water.usgs.gov/ida/index_usgs.cfm?ncd=49" title="Instantaneous Data Archive for Utah">Instantaneous Data Archive</a> (IDA)</li>
+			<li><a href="http://water.usgs.gov/waterwatch/index.php?sno=ut&yr=2008&dt=dv14d&btnGo=GO&m=sitedur">Duration hydrographs</a></li>
+	</ul></li>
+</ul>
+
+<ul>
+    <li><a href="http://water.usgs.gov/waterwatch/?m=real&r=ut&w=real%2Cmap" title="Utah WaterWatch Web page."><span class="boldsmaller">WaterWatch</span></a>
+	<ul>
+		<li><a href="http://water.usgs.gov/waterwatch/?m=flood&r=ut&w=real%2Cmap" title="Information  about floods and droughts in Utah. ">Floods</a> | <a href="http://water.usgs.gov/waterwatch/?m=dryw&r=ut&w=dryw%2Cmap" title="Information about drought in Utah. ">Droughts</a></li>
+	<li><a href="http://water.usgs.gov/waterwatch/?m=real&r=ut&w=real%2Cmap" title="Utah WaterWatch site map. ">Current conditions</a></li>
+	<li><a href="http://water.usgs.gov/waterwatch/wqwatch/">Water-Quality Watch</a></li>
+	<li><a href="http://groundwaterwatch.usgs.gov/">Groundwater Watch</a></li>
+	</ul>
+    </li>
+</ul>
+
+<ul>
+  <li><span class="boldsmaller">Interactive Data Site Maps</span>
+    <ul>
+      <li><a href="http://maps.waterdata.usgs.gov/mapper">NWIS Mapper</a></li>
+      <li><a href="http://water.usgs.gov/osw/streamstats/utah.html">Utah StreamStats Application</a></li>
+    </ul></li>
+</ul>
+
+<a name="skipdata"></a>
+		<a href="http://ut.water.usgs.gov/#skipmajorprojects" title="Skip information links." name="majorprojects"></a>
+<h2>Utah PROJECTS</h2>
+<ul>
+    <li>Major Projects (<a href="http://ut.water.usgs.gov/projects/">view all</a>)
+      <ul>
+	<li><a href="http://ut.water.usgs.gov/projects/greatbasin/index.html">Great Basin Ground Water Availability</a></li>
+	<li><a href="http://ut.water.usgs.gov/projects/streamstats/index.html">Stream Stats</a></li>
+	<li><a href="http://ut.water.usgs.gov/projects/gslnutrient/">Great Salt Lake Nutrient Cycling</a></li>
+	<li><a href="http://ut.water.usgs.gov/projects/coloradoriverbasin/index.html">Salinity Load Assessment</a></li>
+	</ul></li>
+</ul>
+
+<ul>
+    <li><span title="USGS National Water Quality Assessment Program." class="popuptext">NAWQA</span> Program
+      <ul>
+    	<li><a href="http://ut.water.usgs.gov/nawqa/grsl/">Great Salt Lake Basins</a></li>
+	</ul></li>
+</ul>
+<a name="skipmajorprojects"></a>
+		<a href="http://ut.water.usgs.gov/#skipabout" title="Skip about the science center." name="topabout"></a>
+<h2>ABOUT THE UTAH WSC</h2>
+<ul><li><ul><li><a href="http://ut.water.usgs.gov/about/">Office information</a>
+		<ul><li><a href="http://ut.water.usgs.gov/about/officemain.html">Locations</a></li>
+				<li><a href="http://ut.water.usgs.gov/about/employeedirectory.html">Employee directory</a></li>
+				<li><a href="http://ut.water.usgs.gov/about/organization.html">Office organization</a></li>
+				<li><a href="http://ut.water.usgs.gov/about/whatwedo.html">What we do</a></li>
+		</ul></li>
+		<li><a href="http://ut.water.usgs.gov/newsroom/">Newsroom</a></li>
+		<li><a href="http://ut.water.usgs.gov/about/outreach.html">Outreach/Education</a></li>
+		<li><a href="http://ut.water.usgs.gov/about/inforequests.html">Information requests</a></li>
+	</ul>
+</li>
+	</ul>
+	
+	<ul><li>
+		<ul><li><a href="http://www.usgs.gov/phonebook/employee/">USGS Phonebook</a></li>
+		<li><a href="http://www.usgs.gov/ohr/">Employment</a></li>
+	</ul></li>
+	</ul>
+<a name="skipabout"></a>
+		<a href="http://ut.water.usgs.gov/#skipusgsstates" title="Skip USGS in your state." name="topusgsstates"></a>
+<h2>USGS IN YOUR STATE</h2>
+<p>USGS Water Science Centers are located in each state.</p>
+<img src="./USGS Utah Water Science Center - Home page_files/usmapsmall.gif" width="201" height="133" border="0" alt="There is a USGS Water Science Center office in each State. " usemap="#wscoffices">
+<map name="wscoffices" id="wscoffices">
+<area alt="Washington" coords="2,1,30,18" href="http://wa.water.usgs.gov/" title="Washington">
+<area alt="Oregon" coords="1,18,29,34" href="http://or.water.usgs.gov/" title="Oregon">
+<area alt="California" shape="poly" coords="0,34,16,36,12,49,28,71,25,83,0,72" href="http://ca.water.usgs.gov/" title="California">
+<area alt="Idaho" shape="poly" coords="30,2,36,2,36,24,45,29,44,40,25,38,30,32" href="http://id.water.usgs.gov/" title="Idaho">
+<area alt="Nevada" shape="poly" coords="16,36,34,41,28,68,13,48" href="http://nevada.usgs.gov/water/" title="Nevada">
+<area alt="Montana" shape="poly" coords="38,8,70,13,66,30,38,24" href="http://mt.water.usgs.gov/" title="Montana">
+<area alt="Wyoming" coords="46,30,66,47" href="http://wy.water.usgs.gov/" title="Wyoming">
+<area alt="Utah" shape="poly" coords="36,42,43,41,43,46,48,48,48,64,31,62" href="./USGS Utah Water Science Center - Home page_files/USGS Utah Water Science Center - Home page.html" title="Utah">
+<area alt="Colorado" coords="50,48,72,66" href="http://co.water.usgs.gov/" title="Colorado">
+<area alt="Arizona" shape="poly" coords="31,63,48,65,45,92,26,83" href="http://az.water.usgs.gov/" title="Arizona">
+<area alt="New Mexico" coords="49,66,69,90" href="http://nm.water.usgs.gov/" title="New Mexico">
+<area alt="North Dakota" coords="70,13,90,28" href="http://nd.water.usgs.gov/" title="North Dakota">
+<area alt="South Dakota" coords="67,28,91,42" href="http://sd.water.usgs.gov/" title="South Dakota">
+<area alt="Nebraska" shape="poly" coords="67,42,89,42,95,53,73,52,72,47,67,47" href="http://ne.water.usgs.gov/" title="Nebraska">
+<area alt="Kansas" coords="73,54,98,68" href="http://ks.water.usgs.gov/" title="Kansas">
+<area alt="Oklahoma" shape="poly" coords="72,67,97,70,98,83,80,80,80,70,70,70" href="http://ok.water.usgs.gov/" title="Oklahoma">
+<area alt="Texas" shape="poly" coords="69,72,79,72,79,81,100,84,104,106,85,120,54,91,69,91" href="http://tx.usgs.gov/" title="Texas.">
+<area alt="Minnesota" shape="poly" coords="90,12,112,16,102,28,107,37,92,37" href="http://mn.water.usgs.gov/" title="Minnesota">
+<area alt="Iowa" shape="poly" coords="91,39,108,39,112,44,108,50,95,50" href="http://ia.water.usgs.gov/" title="Iowa">
+<area alt="Missouri" shape="poly" coords="97,51,108,51,118,67,115,71,112,69,99,68" href="http://mo.water.usgs.gov/" title="Missouri">
+<area alt="Arkansas" shape="poly" coords="98,70,116,70,111,87,102,87" href="http://ar.water.usgs.gov/" title="Arkansas">
+<area alt="Louisiana " shape="poly" coords="101,88,111,88,111,94,117,94,121,101,105,106" href="http://la.water.usgs.gov/" title="Louisiana ">
+<area alt="Wisconsin " shape="poly" coords="108,22,120,29,119,41,111,42,103,28" href="http://wi.water.usgs.gov/" title="Wisconsin ">
+<area alt="Illinois" shape="poly" coords="114,43,121,42,122,61,119,65,109,51,109,51,109,51" href="http://il.water.usgs.gov/" title="Illinois">
+<area alt="Mississippi" shape="poly" coords="115,76,120,77,122,96,117,92,112,92,112,83" href="http://ms.water.usgs.gov/" title="Mississippi">
+<area alt="Michigan" shape="poly" coords="112,21,122,17,139,36,134,43,122,42,120,41,120,27" href="http://mi.water.usgs.gov/" title="Michigan">
+<area alt="Indiana" shape="poly" coords="123,43,132,43,131,55,123,62" href="http://in.water.usgs.gov/" title="Indiana">
+<area alt="Ohio" shape="poly" coords="133,44,145,40,146,47,139,56,133,54" href="http://oh.water.usgs.gov/" title="Ohio">
+<area alt="Kentucky" shape="poly" coords="125,61,134,55,140,57,142,62,139,66,119,67" href="http://ky.water.usgs.gov/" title="Kentucky">
+<area alt="Tennessee" shape="poly" coords="118,68,144,66,137,73,116,75" href="http://tn.water.usgs.gov/" title="Tennessee">
+<area alt="Alabama" shape="poly" coords="122,77,131,76,135,92,127,92,127,97,123,98" href="http://al.water.usgs.gov/" title="Alabama">
+<area alt="Pennsylvania" shape="poly" coords="146,40,162,39,164,47,148,50" href="http://pa.water.usgs.gov/" title="Pennsylvania">
+<area alt="West Virginia" shape="poly" coords="143,50,154,50,149,60,142,61,140,56" href="http://wv.water.usgs.gov/" title="West Virginia">
+<area alt="Georgia" shape="poly" coords="131,74,139,74,152,89,150,92,137,93" href="http://ga.water.usgs.gov/" title="Georgia">
+<area alt="Florida" shape="poly" coords="128,93,155,94,162,115,152,120,140,100,129,99" href="http://fl.water.usgs.gov/" title="Florida">
+<area alt="Caribbean" shape="poly" coords="105,111,134,103,147,120,100,132" href="http://pr.water.usgs.gov/" title="Caribbean">
+<area alt="Alaska" shape="poly" coords="1,85,34,96,37,127,1,120" href="http://alaska.usgs.gov/science/water/index.php" title="Alaska">
+<area alt="Hawaii" shape="poly" coords="45,101,77,118,68,131,38,116" href="http://hi.water.usgs.gov/" class="." title="Pacific Islands">
+<area alt="New York" shape="poly" coords="146,33,158,23,166,23,168,40,162,38,146,39" href="http://ny.water.usgs.gov/" title="New York">
+<area alt="Vermont" shape="poly" coords="151,14,166,16,171,21,170,30,168,30,167,22,150,22" href="http://vt.water.usgs.gov/" title="Vermont">
+<area alt="New Hampshire" shape="poly" coords="153,4,169,4,175,29,171,30,171,21,167,15,151,13" href="http://nh.water.usgs.gov/" title="New Hampshire">
+<area alt="Maine" shape="poly" coords="172,6,189,7,188,17,176,26" href="http://me.water.usgs.gov/" title="Maine">
+<area alt="Massachusetts" shape="poly" coords="185,19,200,19,199,27,186,27,179,28,175,32,175,34,168,34,169,31,176,29,178,25" href="http://ma.water.usgs.gov/" title="Massachusetts">
+<area alt="South Carolina" shape="poly" coords="141,73,167,77,162,91,151,86" href="http://sc.water.usgs.gov/" title="South Carolina">
+<area alt="North Carolina" shape="poly" coords="144,65,164,63,168,67,166,75,140,72" href="http://nc.water.usgs.gov/" title="North Carolina">
+<area alt="Rhode Island" shape="poly" coords="177,30,182,28,196,28,196,35,177,35,175,37,175,34" href="http://ri.water.usgs.gov/" title="Rhode Island">
+<area alt="Virginia" shape="poly" coords="143,62,149,60,155,51,160,52,165,62,144,64" href="http://va.water.usgs.gov/" title="Virginia">
+<area alt="Connecticut" shape="poly" coords="169,35,173,37,176,36,178,35,195,36,190,45,174,44,169,39" href="http://ct.water.usgs.gov/" title="Connecticut">
+<area alt="New Jersey" shape="poly" coords="164,40,171,44,183,46,181,51,167,52,163,49,166,47" href="http://nj.usgs.gov/" title="New Jersey">
+<area alt="Maryland-Delaware-D.C." shape="poly" coords="164,52,179,53,193,51,188,76,168,65" href="http://md.water.usgs.gov/" title="Maryland-Delaware-D.C.">
+</map>
+
+<a name="skipusgsstates"></a>
+</td>
+<!-- END left side bar section -->
+
+<!-- START main body -->
+<td id="mainbody">
+
             <div id="contentFrame">
                 <!--show any server generated error message-->
                 {% if showerror %}
@@ -131,8 +360,211 @@
                             <img alt="Radar Image" src="http://radar.weather.gov/lite/NCR/MTX_loop.gif" alt="Recent Radar Information" />
                         </div>
                     </div>    
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
+
+<!-- End page content (table). Footer comes next. -->
+</td>
+</tr></tbody></table>
+
+
+	<!-- BEGIN USGS Footer Template -->
+	<p id="linksfooterbar">
+	<a href="http://www.usgs.gov/" title="USGS Home page.">USGS Home</a>
+	<a href="http://water.usgs.gov/" title="USGS Water Resources">Water</a>
+	<a href="http://www.usgs.gov/climate_landuse/" title="Climate and Land Use Change">Climate Change</a>
+	<a href="http://www.usgs.gov/core_science_systems/" title="Core Science Systems">Core Science</a>
+	<a href="http://www.usgs.gov/ecosystems/">Ecosystems</a>
+	<a href="http://www.usgs.gov/resources_envirohealth/" title="Energy, Minerals, and Environmental Health">Energy&amp;Env.  Health</a>
+	<a href="http://www.usgs.gov/natural_hazards/" title="Natural Hazards">Hazards</a>
+</p>
+
+
+	<div id="usgsfooter">
+	<p id="usgsfooterbar">
+		<a href="http://www.usgs.gov/laws/accessibility.html" title="Accessibility Policy (Section 508)">Accessibility</a>
+		<a href="http://www.usgs.gov/foia/" title="Freedom of Information Act">FOIA</a>
+		<a href="http://www.usgs.gov/laws/privacy.html" title="Privacy policies of the U.S. Geological Survey.">Privacy</a>
+		<a href="http://www.usgs.gov/laws/policies_notices.html" title="Policies and notices that govern information posted on USGS Web sites.">Policies and Notices</a>
+	</p>
+
+		<p id="usgsfootertext">
+			<a href="http://www.takepride.gov/"><img src="./USGS Utah Water Science Center - Home page_files/footer_graphic_takePride.jpg" alt="Take Pride in America logo" title="Take Pride in America Home Page" width="60" height="58"></a>
+		<a href="http://firstgov.gov/"><img src="./USGS Utah Water Science Center - Home page_files/footer_graphic_usagov.jpg" alt="USA.gov logo" width="90" height="26" style="float: right; margin-right: 10px;" title="USAGov: Government Made Easy."></a>
+			<a href="http://www.doi.gov/">U.S. Department of the Interior</a> |
+			<a href="http://www.usgs.gov/">U.S. Geological Survey</a><br>
+	URL: http://ut.water.usgs.gov/index.html<br>
+	Page Contact Information: <a href="mailto:GS-W-UT_Web_Requests@usgs.gov">Utah WSC Webmaster</a><br>
+	Page Last Modified: Thursday, 10-Jan-2013 11:59:47 EST
+		</p>
+	</div>
+	<!-- END USGS Footer Template -->
+
+<!--Use the Framework exec cmd when you are on a staging or a state page.   This script interprets the page you are coming from and automatically pulls the RT imagemap file for that state-->
+<map name="real" id="real">
+<area shape="RECT" coords="218, 86, 226, 94" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09217900" alt="09217900: Flow=142cfs,2013-04-01 09:00,Stage=2.41ft,2013-04-01 08:00:00,Floodstage=5ft,High,BLACKS FORK NEAR ROBERTSON, WY" title="09217900: Flow=142cfs,2013-04-01 09:00,Stage=2.41ft,2013-04-01 08:00:00,Floodstage=5ft,High,BLACKS FORK NEAR ROBERTSON, WY">
+<area shape="RECT" coords="160, 100, 168, 108" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10170500" alt="10170500: Flow=31cfs,Stage=6.82ft,Floodstage=35.6ft,2013-04-01 08:30,Low,SURPLUS CANAL @ SALT LAKE CITY, UT" title="10170500: Flow=31cfs,Stage=6.82ft,Floodstage=35.6ft,2013-04-01 08:30,Low,SURPLUS CANAL @ SALT LAKE CITY, UT">
+<area shape="RECT" coords="153, 118, 161, 126" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10166430" alt="10166430: Flow=0.03cfs,Stage=1.96ft,Floodstage=5.4ft,2013-04-01 08:45,Low,WEST CANYON CREEK NEAR CEDAR FORT, UT" title="10166430: Flow=0.03cfs,Stage=1.96ft,Floodstage=5.4ft,2013-04-01 08:45,Low,WEST CANYON CREEK NEAR CEDAR FORT, UT">
+<area shape="RECT" coords="96, 22, 104, 30" href="http://waterdata.usgs.gov/id/nwis/uv?site_no=13078000" alt="13078000: Flow=8.1cfs,Stage=3.52ft,2013-04-01 08:15,&lt;10,RAFT RIVER AB ONEMILE CREEK NR MALTA ID" title="13078000: Flow=8.1cfs,Stage=3.52ft,2013-04-01 08:15,&lt;10,RAFT RIVER AB ONEMILE CREEK NR MALTA ID">
+<area shape="RECT" coords="153, 68, 161, 76" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10141000" alt="10141000: Flow=78cfs,Stage=10.47ft,Floodstage=27ft,2013-04-01 09:00,&lt;10,WEBER RIVER NEAR PLAIN CITY, UT" title="10141000: Flow=78cfs,Stage=10.47ft,Floodstage=27ft,2013-04-01 09:00,&lt;10,WEBER RIVER NEAR PLAIN CITY, UT">
+<area shape="RECT" coords="85, 309, 93, 317" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09413200" alt="09413200: Flow=38cfs,Stage=5.39ft,Floodstage=22.9ft,2013-04-01 08:45,&lt;10,VIRGIN RIVER NEAR BLOOMINGTON, UT" title="09413200: Flow=38cfs,Stage=5.39ft,Floodstage=22.9ft,2013-04-01 08:45,&lt;10,VIRGIN RIVER NEAR BLOOMINGTON, UT">
+<area shape="RECT" coords="290, 294, 298, 302" href="http://waterdata.usgs.gov/co/nwis/uv?site_no=09372000" alt="09372000: Flow=15cfs,Stage=2.67ft,2013-04-01 08:30,&lt;10,MCELMO CREEK NEAR COLORADO-UTAH STATE LINE" title="09372000: Flow=15cfs,Stage=2.67ft,2013-04-01 08:30,&lt;10,MCELMO CREEK NEAR COLORADO-UTAH STATE LINE">
+<area shape="RECT" coords="290, 312, 298, 320" href="http://waterdata.usgs.gov/co/nwis/uv?site_no=09371010" alt="09371010: Flow=645cfs,Stage=5.70ft,2013-04-01 08:00,&lt;10,SAN JUAN RIVER AT FOUR CORNERS, CO" title="09371010: Flow=645cfs,Stage=5.70ft,2013-04-01 08:00,&lt;10,SAN JUAN RIVER AT FOUR CORNERS, CO">
+<area shape="RECT" coords="241, 130, 249, 138" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09295000" alt="09295000: Flow=40cfs,Stage=2.65ft,Floodstage=8.4ft,2013-04-01 08:30,&lt;10,DUCHESNE RIVER AT MYTON, UT" title="09295000: Flow=40cfs,Stage=2.65ft,Floodstage=8.4ft,2013-04-01 08:30,&lt;10,DUCHESNE RIVER AT MYTON, UT">
+<area shape="RECT" coords="218, 113, 226, 121" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09279000" alt="09279000: Flow=35cfs,Stage=1.77ft,Floodstage=5.9ft,2013-04-01 09:00,&lt;10,ROCK CREEK NEAR MOUNTAIN HOME, UT" title="09279000: Flow=35cfs,Stage=1.77ft,Floodstage=5.9ft,2013-04-01 09:00,&lt;10,ROCK CREEK NEAR MOUNTAIN HOME, UT">
+<area shape="RECT" coords="267, 88, 275, 96" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09234500" alt="09234500: Flow=835cfs,Stage=8.19ft,Floodstage=15.4ft,2013-04-01 08:30,&lt;10,GREEN RIVER NEAR GREENDALE, UT" title="09234500: Flow=835cfs,Stage=8.19ft,Floodstage=15.4ft,2013-04-01 08:30,&lt;10,GREEN RIVER NEAR GREENDALE, UT">
+<area shape="RECT" coords="280, 209, 288, 217" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09180000" alt="09180000: Flow=148cfs,Stage=7.10ft,2013-04-01 08:45,&lt;10,DOLORES RIVER NEAR CISCO, UT" title="09180000: Flow=148cfs,Stage=7.10ft,2013-04-01 08:45,&lt;10,DOLORES RIVER NEAR CISCO, UT">
+<area shape="RECT" coords="170, 128, 178, 136" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10163000" alt="10163000: Flow=48cfs,Stage=3.69ft,Floodstage=7.7ft,2013-04-01 08:45,&lt;10,PROVO RIVER AT PROVO, UT" title="10163000: Flow=48cfs,Stage=3.69ft,Floodstage=7.7ft,2013-04-01 08:45,&lt;10,PROVO RIVER AT PROVO, UT">
+<area shape="RECT" coords="164, 76, 172, 84" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10136500" alt="10136500: Flow=98cfs,Stage=11.17ft,Floodstage=17ft,2013-04-01 08:30,&lt;10,WEBER RIVER AT GATEWAY, UT" title="10136500: Flow=98cfs,Stage=11.17ft,Floodstage=17ft,2013-04-01 08:30,&lt;10,WEBER RIVER AT GATEWAY, UT">
+<area shape="RECT" coords="183, 74, 191, 82" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10132500" alt="10132500: Flow=7.7cfs,Stage=1.19ft,Floodstage=2.5ft,2013-04-01 08:45,&lt;10,LOST CREEK NEAR CROYDEN, UTAH" title="10132500: Flow=7.7cfs,Stage=1.19ft,Floodstage=2.5ft,2013-04-01 08:45,&lt;10,LOST CREEK NEAR CROYDEN, UTAH">
+<area shape="RECT" coords="199, 55, 207, 63" href="http://waterdata.usgs.gov/wy/nwis/uv?site_no=10020300" alt="10020300: Flow=1.5cfs,Stage=1.91ft,Floodstage=8.2ft,2013-04-01 08:45,&lt;10,BEAR RIVER BELOW RESERVOIR, NEAR WOODRUFF, UT" title="10020300: Flow=1.5cfs,Stage=1.91ft,Floodstage=8.2ft,2013-04-01 08:45,&lt;10,BEAR RIVER BELOW RESERVOIR, NEAR WOODRUFF, UT">
+<area shape="RECT" coords="94, 298, 102, 306" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09408000" alt="09408000: Flow=2.2cfs,Stage=2.63ft,2013-04-01 09:00,&lt;10,LEEDS CREEK NEAR LEEDS, UT" title="09408000: Flow=2.2cfs,Stage=2.63ft,2013-04-01 09:00,&lt;10,LEEDS CREEK NEAR LEEDS, UT">
+<area shape="RECT" coords="252, 305, 260, 313" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09379500" alt="09379500: Flow=562cfs,2013-04-01 09:00,Stage=3.71ft,2013-03-31 17:00:00,Floodstage=23ft,&lt;10,SAN JUAN RIVER NEAR BLUFF, UT" title="09379500: Flow=562cfs,2013-04-01 09:00,Stage=3.71ft,2013-03-31 17:00:00,Floodstage=23ft,&lt;10,SAN JUAN RIVER NEAR BLUFF, UT">
+<area shape="RECT" coords="269, 269, 277, 277" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09378630" alt="09378630: Flow=0.00cfs,Stage=0.50ft,2013-04-01 08:30,&lt;10,RECAPTURE CREEK NEAR BLANDING, UT" title="09378630: Flow=0.00cfs,Stage=0.50ft,2013-04-01 08:30,&lt;10,RECAPTURE CREEK NEAR BLANDING, UT">
+<area shape="RECT" coords="279, 142, 287, 150" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09306500" alt="09306500: Flow=315cfs,Stage=2.12ft,Floodstage=10ft,2013-04-01 08:45,&lt;10,WHITE RIVER NEAR WATSON, UTAH" title="09306500: Flow=315cfs,Stage=2.12ft,Floodstage=10ft,2013-04-01 08:45,&lt;10,WHITE RIVER NEAR WATSON, UTAH">
+<area shape="RECT" coords="276, 117, 284, 125" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09261000" alt="09261000: Flow=1700cfs,Stage=2.37ft,Floodstage=10.8ft,2013-04-01 08:30,&lt;10,GREEN RIVER NEAR JENSEN, UT" title="09261000: Flow=1700cfs,Stage=2.37ft,Floodstage=10.8ft,2013-04-01 08:30,&lt;10,GREEN RIVER NEAR JENSEN, UT">
+<area shape="RECT" coords="276, 209, 284, 217" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09180500" alt="09180500: Flow=2010cfs,2013-04-01 09:00,Stage=1.66ft,2013-03-31 17:00:00,Floodstage=19ft,&lt;10,COLORADO RIVER NEAR CISCO, UT" title="09180500: Flow=2010cfs,2013-04-01 09:00,Stage=1.66ft,2013-03-31 17:00:00,Floodstage=19ft,&lt;10,COLORADO RIVER NEAR CISCO, UT">
+<area shape="RECT" coords="287, 190, 295, 198" href="http://waterdata.usgs.gov/co/nwis/uv?site_no=09163500" alt="09163500: Flow=2190cfs,Stage=2.66ft,Floodstage=15ft,2013-04-01 08:45,&lt;10,COLORADO RIVER NEAR COLORADO-UTAH STATE LINE" title="09163500: Flow=2190cfs,Stage=2.66ft,Floodstage=15ft,2013-04-01 08:45,&lt;10,COLORADO RIVER NEAR COLORADO-UTAH STATE LINE">
+<area shape="RECT" coords="110, 275, 118, 283" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10242000" alt="10242000: Flow=36cfs,Stage=5.23ft,Floodstage=8.5ft,2013-04-01 08:30,76-90,COAL CREEK NEAR CEDAR CITY, UT" title="10242000: Flow=36cfs,Stage=5.23ft,Floodstage=8.5ft,2013-04-01 08:30,76-90,COAL CREEK NEAR CEDAR CITY, UT">
+<area shape="RECT" coords="144, 223, 152, 231" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10194200" alt="10194200: Flow=38cfs,Stage=1.43ft,2013-04-01 09:00,76-90,CLEAR CREEK ABOVE DIVERSIONS, NEAR SEVIER, UT" title="10194200: Flow=38cfs,Stage=1.43ft,2013-04-01 09:00,76-90,CLEAR CREEK ABOVE DIVERSIONS, NEAR SEVIER, UT">
+<area shape="RECT" coords="163, 84, 171, 92" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10142000" alt="10142000: Flow=18cfs,Stage=0.82ft,2013-04-01 08:15,76-90,FARMINGTON CR ABV DIV NR FARMINGTON, UTAH" title="10142000: Flow=18cfs,Stage=0.82ft,2013-04-01 08:15,76-90,FARMINGTON CR ABV DIV NR FARMINGTON, UTAH">
+<area shape="RECT" coords="222, 109, 230, 117" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09291000" alt="09291000: Flow=1.2cfs,Stage=0.76ft,2013-04-01 09:00,76-90,LAKE FORK RIVER BL MOON LAKE NR MOUNTAIN HOME, UT" title="09291000: Flow=1.2cfs,Stage=0.76ft,2013-04-01 09:00,76-90,LAKE FORK RIVER BL MOON LAKE NR MOUNTAIN HOME, UT">
+<area shape="RECT" coords="155, 177, 163, 185" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10219000" alt="10219000: Flow=2.2cfs,Stage=3.94ft,2013-04-01 09:00,10-24,SEVIER RIVER NEAR JUAB, UT" title="10219000: Flow=2.2cfs,Stage=3.94ft,2013-04-01 09:00,10-24,SEVIER RIVER NEAR JUAB, UT">
+<area shape="RECT" coords="175, 184, 183, 192" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10215900" alt="10215900: Flow=4.9cfs,2013-04-01 09:00,Stage=2.50ft,2013-03-31 17:00:00,10-24,MANTI CREEK BLW DUGWAY CREEK, NR MANTI, UT" title="10215900: Flow=4.9cfs,2013-04-01 09:00,Stage=2.50ft,2013-03-31 17:00:00,10-24,MANTI CREEK BLW DUGWAY CREEK, NR MANTI, UT">
+<area shape="RECT" coords="171, 116, 179, 124" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10164500" alt="10164500: Flow=16cfs,Stage=6.06ft,2013-04-01 08:30,10-24,AMERICAN FK AB UPPER POWERPLANT NR AMERICAN FK, UT" title="10164500: Flow=16cfs,Stage=6.06ft,2013-04-01 08:30,10-24,AMERICAN FK AB UPPER POWERPLANT NR AMERICAN FK, UT">
+<area shape="RECT" coords="165, 158, 173, 166" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10146000" alt="10146000: Flow=9.8cfs,Stage=1.58ft,2013-04-01 08:30,10-24,SALT CREEK AT NEPHI, UT" title="10146000: Flow=9.8cfs,Stage=1.58ft,2013-04-01 08:30,10-24,SALT CREEK AT NEPHI, UT">
+<area shape="RECT" coords="171, 69, 179, 77" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10137500" alt="10137500: Flow=59cfs,Stage=1.54ft,Floodstage=4.6ft,2013-04-01 08:15,10-24,SOUTH FORK OGDEN RIVER NEAR HUNTSVILLE, UT" title="10137500: Flow=59cfs,Stage=1.54ft,Floodstage=4.6ft,2013-04-01 08:15,10-24,SOUTH FORK OGDEN RIVER NEAR HUNTSVILLE, UT">
+<area shape="RECT" coords="183, 90, 191, 98" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10130500" alt="10130500: Flow=43cfs,Stage=1.46ft,Floodstage=6.1ft,2013-04-01 08:30,10-24,WEBER RIVER NEAR COALVILLE, UT" title="10130500: Flow=43cfs,Stage=1.46ft,Floodstage=6.1ft,2013-04-01 08:30,10-24,WEBER RIVER NEAR COALVILLE, UT">
+<area shape="RECT" coords="183, 96, 191, 104" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10129500" alt="10129500: Flow=26cfs,Stage=1.68ft,2013-04-01 08:15,10-24,WEBER RIVER NEAR WANSHIP, UT" title="10129500: Flow=26cfs,Stage=1.68ft,2013-04-01 08:15,10-24,WEBER RIVER NEAR WANSHIP, UT">
+<area shape="RECT" coords="153, 51, 161, 59" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10126000" alt="10126000: Flow=1240cfs,Stage=5.65ft,Floodstage=15.5ft,2013-04-01 08:30,10-24,BEAR RIVER NEAR CORINNE, UT" title="10126000: Flow=1240cfs,Stage=5.65ft,Floodstage=15.5ft,2013-04-01 08:30,10-24,BEAR RIVER NEAR CORINNE, UT">
+<area shape="RECT" coords="168, 48, 176, 56" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10113500" alt="10113500: Flow=85cfs,Stage=3.72ft,Floodstage=7ft,2013-04-01 08:45,10-24,BLACKSMITH FORK AB UP and L CO.\&#39;S DAM NR HYRUM, UT" title="10113500: Flow=85cfs,Stage=3.72ft,Floodstage=7ft,2013-04-01 08:45,10-24,BLACKSMITH FORK AB UP and L CO.\&#39;S DAM NR HYRUM, UT">
+<area shape="RECT" coords="189, 49, 197, 57" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10023000" alt="10023000: Flow=5.3cfs,Stage=4.65ft,2013-04-01 08:45,10-24,BIG CREEK NEAR RANDOLPH, UT" title="10023000: Flow=5.3cfs,Stage=4.65ft,2013-04-01 08:45,10-24,BIG CREEK NEAR RANDOLPH, UT">
+<area shape="RECT" coords="259, 316, 267, 324" href="http://waterdata.usgs.gov/az/nwis/uv?site_no=09379200" alt="09379200: Flow=0.64cfs,Stage=1.93ft,2013-04-01 08:00,10-24,CHINLE CREEK NEAR MEXICAN WATER, AZ" title="09379200: Flow=0.64cfs,Stage=1.93ft,2013-04-01 08:00,10-24,CHINLE CREEK NEAR MEXICAN WATER, AZ">
+<area shape="RECT" coords="190, 200, 198, 208" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09330500" alt="09330500: Flow=8.9cfs,Stage=6.08ft,2013-04-01 08:30,10-24,MUDDY CREEK NEAR EMERY, UT" title="09330500: Flow=8.9cfs,Stage=6.08ft,2013-04-01 08:30,10-24,MUDDY CREEK NEAR EMERY, UT">
+<area shape="RECT" coords="178, 239, 186, 247" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09330000" alt="09330000: Flow=79cfs,Stage=4.13ft,2013-04-01 08:45,10-24,FREMONT RIVER NEAR BICKNELL, UT" title="09330000: Flow=79cfs,Stage=4.13ft,2013-04-01 08:45,10-24,FREMONT RIVER NEAR BICKNELL, UT">
+<area shape="RECT" coords="228, 207, 236, 215" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09328500" alt="09328500: Flow=19cfs,Stage=5.59ft,2013-04-01 08:30,10-24,SAN RAFAEL RIVER NEAR GREEN RIVER, UT" title="09328500: Flow=19cfs,Stage=5.59ft,2013-04-01 08:30,10-24,SAN RAFAEL RIVER NEAR GREEN RIVER, UT">
+<area shape="RECT" coords="199, 149, 207, 157" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09312600" alt="09312600: Flow=8.4cfs,Stage=1.90ft,2013-04-01 08:15,10-24,WHITE R BL TABBYUNE CRK NR SOLDIER SUMMIT, UT" title="09312600: Flow=8.4cfs,Stage=1.90ft,2013-04-01 08:15,10-24,WHITE R BL TABBYUNE CRK NR SOLDIER SUMMIT, UT">
+<area shape="RECT" coords="246, 107, 254, 115" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09299500" alt="09299500: Flow=21cfs,Stage=1.72ft,Floodstage=6ft,2013-04-01 08:45,10-24,WHITEROCKS RIVER NEAR WHITEROCKS, UT" title="09299500: Flow=21cfs,Stage=1.72ft,Floodstage=6ft,2013-04-01 08:45,10-24,WHITEROCKS RIVER NEAR WHITEROCKS, UT">
+<area shape="RECT" coords="219, 132, 227, 140" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09288180" alt="09288180: Flow=79cfs,Stage=5.01ft,2013-04-01 08:30,10-24,STRAWBERRY RIVER NEAR DUCHESNE, UT" title="09288180: Flow=79cfs,Stage=5.01ft,2013-04-01 08:30,10-24,STRAWBERRY RIVER NEAR DUCHESNE, UT">
+<area shape="RECT" coords="217, 124, 225, 132" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09277500" alt="09277500: Flow=77cfs,Stage=0.89ft,Floodstage=5.6ft,2013-04-01 08:30,10-24,DUCHESNE RIVER NEAR TABIONA, UT" title="09277500: Flow=77cfs,Stage=0.89ft,Floodstage=5.6ft,2013-04-01 08:30,10-24,DUCHESNE RIVER NEAR TABIONA, UT">
+<area shape="RECT" coords="162, 190, 170, 198" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10217000" alt="10217000: Flow=171cfs,Stage=5.40ft,2013-04-01 08:30,25-75,SEVIER RIV BLW SAN PITCH RIV NR GUNNISON, UT" title="10217000: Flow=171cfs,Stage=5.40ft,2013-04-01 08:30,25-75,SEVIER RIV BLW SAN PITCH RIV NR GUNNISON, UT">
+<area shape="RECT" coords="177, 204, 185, 212" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10205030" alt="10205030: Flow=6.6cfs,Stage=2.57ft,2013-04-01 08:45,25-75,SALINA CREEK NEAR EMERY, UT" title="10205030: Flow=6.6cfs,Stage=2.57ft,2013-04-01 08:45,25-75,SALINA CREEK NEAR EMERY, UT">
+<area shape="RECT" coords="150, 245, 158, 253" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10189000" alt="10189000: Flow=20cfs,Stage=3.29ft,Floodstage=9ft,2013-04-01 08:30,25-75,EAST FORK SEVIER RIVER NEAR KINGSTON, UT" title="10189000: Flow=20cfs,Stage=3.29ft,Floodstage=9ft,2013-04-01 08:30,25-75,EAST FORK SEVIER RIVER NEAR KINGSTON, UT">
+<area shape="RECT" coords="147, 244, 155, 252" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10183500" alt="10183500: Flow=108cfs,Stage=1.26ft,Floodstage=6ft,2013-04-01 08:45,25-75,SEVIER RIVER NEAR KINGSTON, UT" title="10183500: Flow=108cfs,Stage=1.26ft,Floodstage=6ft,2013-04-01 08:45,25-75,SEVIER RIVER NEAR KINGSTON, UT">
+<area shape="RECT" coords="137, 276, 145, 284" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10174500" alt="10174500: Flow=65cfs,Stage=0.92ft,Floodstage=3.9ft,2013-04-01 08:15,25-75,SEVIER RIVER AT HATCH, UT" title="10174500: Flow=65cfs,Stage=0.92ft,Floodstage=3.9ft,2013-04-01 08:15,25-75,SEVIER RIVER AT HATCH, UT">
+<area shape="RECT" coords="133, 278, 141, 286" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10173450" alt="10173450: Flow=11cfs,Stage=0.91ft,2013-04-01 08:45,25-75,MAMMOTH CREEK ABV WEST HATCH DITCH, NEAR HATCH, UT" title="10173450: Flow=11cfs,Stage=0.91ft,2013-04-01 08:45,25-75,MAMMOTH CREEK ABV WEST HATCH DITCH, NEAR HATCH, UT">
+<area shape="RECT" coords="101, 34, 109, 42" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10172952" alt="10172952: Flow=2.1cfs,Stage=2.34ft,2013-04-01 08:15,25-75,DUNN CREEK NEAR PARK VALLEY, UT" title="10172952: Flow=2.1cfs,Stage=2.34ft,2013-04-01 08:15,25-75,DUNN CREEK NEAR PARK VALLEY, UT">
+<area shape="RECT" coords="132, 113, 140, 121" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10172800" alt="10172800: Flow=3.7cfs,Stage=1.40ft,2013-04-01 08:15,25-75,SOUTH WILLOW CREEK NEAR GRANTSVILLE, UT" title="10172800: Flow=3.7cfs,Stage=1.40ft,2013-04-01 08:15,25-75,SOUTH WILLOW CREEK NEAR GRANTSVILLE, UT">
+<area shape="RECT" coords="140, 143, 148, 151" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10172700" alt="10172700: Flow=2.6cfs,Stage=1.00ft,2013-04-01 08:30,25-75,VERNON CREEK NEAR VERNON, UT" title="10172700: Flow=2.6cfs,Stage=1.00ft,2013-04-01 08:30,25-75,VERNON CREEK NEAR VERNON, UT">
+<area shape="RECT" coords="165, 97, 173, 105" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10172200" alt="10172200: Flow=3.7cfs,Stage=0.58ft,2013-04-01 08:45,25-75,RED BUTTE CREEK AT FORT DOUGLAS, NEAR SLC, UT" title="10172200: Flow=3.7cfs,Stage=0.58ft,2013-04-01 08:45,25-75,RED BUTTE CREEK AT FORT DOUGLAS, NEAR SLC, UT">
+<area shape="RECT" coords="186, 107, 194, 115" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10155000" alt="10155000: Flow=126cfs,Stage=7.19ft,2013-04-01 08:45,25-75,PROVO RIVER NEAR HAILSTONE, UT" title="10155000: Flow=126cfs,Stage=7.19ft,2013-04-01 08:45,25-75,PROVO RIVER NEAR HAILSTONE, UT">
+<area shape="RECT" coords="193, 110, 201, 118" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10154200" alt="10154200: Flow=80cfs,Stage=2.35ft,Floodstage=7ft,2013-04-01 08:45,25-75,PROVO RIVER NEAR WOODLAND, UT" title="10154200: Flow=80cfs,Stage=2.35ft,Floodstage=7ft,2013-04-01 08:45,25-75,PROVO RIVER NEAR WOODLAND, UT">
+<area shape="RECT" coords="163, 153, 171, 161" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10146400" alt="10146400: Flow=16cfs,Stage=4.42ft,2013-04-01 08:30,25-75,CURRANT CREEK NEAR MONA, UT" title="10146400: Flow=16cfs,Stage=4.42ft,2013-04-01 08:30,25-75,CURRANT CREEK NEAR MONA, UT">
+<area shape="RECT" coords="163, 89, 171, 97" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10143500" alt="10143500: Flow=3.2cfs,Stage=0.88ft,2013-04-01 08:30,25-75,CENTERVILLE CREEK ABV DIV NR CENTERVILLE, UT" title="10143500: Flow=3.2cfs,Stage=0.88ft,2013-04-01 08:30,25-75,CENTERVILLE CREEK ABV DIV NR CENTERVILLE, UT">
+<area shape="RECT" coords="174, 89, 182, 97" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10134500" alt="10134500: Flow=8.7cfs,Stage=0.16ft,Floodstage=2.5ft,2013-04-01 08:45,25-75,EAST CANYON CREEK NEAR MORGAN, UT" title="10134500: Flow=8.7cfs,Stage=0.16ft,Floodstage=2.5ft,2013-04-01 08:45,25-75,EAST CANYON CREEK NEAR MORGAN, UT">
+<area shape="RECT" coords="183, 89, 191, 97" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10131000" alt="10131000: Flow=59cfs,Stage=3.54ft,Floodstage=7ft,2013-04-01 08:30,25-75,CHALK CREEK AT COALVILLE, UT" title="10131000: Flow=59cfs,Stage=3.54ft,Floodstage=7ft,2013-04-01 08:30,25-75,CHALK CREEK AT COALVILLE, UT">
+<area shape="RECT" coords="167, 42, 175, 50" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10109000" alt="10109000: Flow=147cfs,Stage=2.67ft,Floodstage=5ft,2013-04-01 09:00,25-75,LOGAN RIVER ABOVE STATE DAM, NEAR LOGAN, UT" title="10109000: Flow=147cfs,Stage=2.67ft,Floodstage=5ft,2013-04-01 09:00,25-75,LOGAN RIVER ABOVE STATE DAM, NEAR LOGAN, UT">
+<area shape="RECT" coords="161, 26, 169, 34" href="http://waterdata.usgs.gov/id/nwis/uv?site_no=10092700" alt="10092700: Flow=687cfs,Stage=10.19ft,Floodstage=21ft,2013-04-01 08:45,25-75,BEAR RIVER AT IDAHO-UTAH STATE LINE" title="10092700: Flow=687cfs,Stage=10.19ft,Floodstage=21ft,2013-04-01 08:45,25-75,BEAR RIVER AT IDAHO-UTAH STATE LINE">
+<area shape="RECT" coords="199, 59, 207, 67" href="http://waterdata.usgs.gov/wy/nwis/uv?site_no=10020100" alt="10020100: Flow=103cfs,Stage=1.39ft,2013-04-01 08:45,25-75,BEAR RIVER ABOVE RESERVOIR, NEAR WOODRUFF, UT" title="10020100: Flow=103cfs,Stage=1.39ft,2013-04-01 08:45,25-75,BEAR RIVER ABOVE RESERVOIR, NEAR WOODRUFF, UT">
+<area shape="RECT" coords="206, 86, 214, 94" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10011500" alt="10011500: Flow=45cfs,Stage=4.04ft,Floodstage=8ft,2013-04-01 08:30,25-75,BEAR RIVER NEAR UTAH-WYOMING STATE LINE" title="10011500: Flow=45cfs,Stage=4.04ft,Floodstage=8ft,2013-04-01 08:30,25-75,BEAR RIVER NEAR UTAH-WYOMING STATE LINE">
+<area shape="RECT" coords="103, 301, 111, 309" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09406000" alt="09406000: Flow=160cfs,Stage=8.10ft,Floodstage=15ft,2013-04-01 08:45,25-75,VIRGIN RIVER AT VIRGIN, UT" title="09406000: Flow=160cfs,Stage=8.10ft,Floodstage=15ft,2013-04-01 08:45,25-75,VIRGIN RIVER AT VIRGIN, UT">
+<area shape="RECT" coords="112, 301, 120, 309" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09405500" alt="09405500: Flow=108cfs,Stage=0.79ft,Floodstage=9.3ft,2013-04-01 08:45,25-75,NORTH FORK VIRGIN RIVER NEAR SPRINGDALE, UT" title="09405500: Flow=108cfs,Stage=0.79ft,Floodstage=9.3ft,2013-04-01 08:45,25-75,NORTH FORK VIRGIN RIVER NEAR SPRINGDALE, UT">
+<area shape="RECT" coords="175, 269, 183, 277" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09337500" alt="09337500: Flow=5.5cfs,Stage=1.48ft,2013-04-01 08:15,25-75,ESCALANTE RIVER NEAR ESCALANTE, UT" title="09337500: Flow=5.5cfs,Stage=1.48ft,2013-04-01 08:15,25-75,ESCALANTE RIVER NEAR ESCALANTE, UT">
+<area shape="RECT" coords="172, 264, 180, 272" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09337000" alt="09337000: Flow=4.2cfs,Stage=1.54ft,2013-04-01 08:45,25-75,PINE CREEK NEAR ESCALANTE, UT" title="09337000: Flow=4.2cfs,Stage=1.54ft,2013-04-01 08:45,25-75,PINE CREEK NEAR ESCALANTE, UT">
+<area shape="RECT" coords="227, 251, 235, 259" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09333500" alt="09333500: Flow=135cfs,Stage=3.99ft,2013-04-01 08:30,25-75,DIRTY DEVIL R AB POISON SP WSH NR HANKSVILLE UT" title="09333500: Flow=135cfs,Stage=3.99ft,2013-04-01 08:30,25-75,DIRTY DEVIL R AB POISON SP WSH NR HANKSVILLE UT">
+<area shape="RECT" coords="172, 220, 180, 228" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09329050" alt="09329050: Flow=6.5cfs,Stage=4.23ft,2013-04-01 08:45,25-75,SEVEN MILE CREEK NEAR FISH LAKE, UT" title="09329050: Flow=6.5cfs,Stage=4.23ft,2013-04-01 08:45,25-75,SEVEN MILE CREEK NEAR FISH LAKE, UT">
+<area shape="RECT" coords="191, 193, 199, 201" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09326500" alt="09326500: Flow=13cfs,Stage=5.83ft,2013-04-01 08:15,25-75,FERRON CREEK (UPPER STATION) NEAR FERRON, UT" title="09326500: Flow=13cfs,Stage=5.83ft,2013-04-01 08:15,25-75,FERRON CREEK (UPPER STATION) NEAR FERRON, UT">
+<area shape="RECT" coords="204, 130, 212, 138" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09288000" alt="09288000: Flow=32cfs,Stage=1.30ft,2013-04-01 08:45,25-75,CURRANT CREEK NEAR FRUITLAND, UT" title="09288000: Flow=32cfs,Stage=1.30ft,2013-04-01 08:45,25-75,CURRANT CREEK NEAR FRUITLAND, UT">
+<area shape="RECT" coords="151, 60, 159, 68" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=412523112093301" alt="412523112093301: Flow=397cfs,Stage=4.23ft,2013-03-31 16:15,Not ranked, (B- 8- 3)14ccc   Bear River Refuge Whistler Canal" title="412523112093301: Flow=397cfs,Stage=4.23ft,2013-03-31 16:15,Not ranked, (B- 8- 3)14ccc   Bear River Refuge Whistler Canal">
+<area shape="RECT" coords="152, 60, 160, 68" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=412523112073901" alt="412523112073901: Flow=163cfs,Stage=4.60ft,2013-03-31 16:15,Not ranked, (B- 8- 3)13ddd   Bear River Refuge Unit 5 drain" title="412523112073901: Flow=163cfs,Stage=4.60ft,2013-03-31 16:15,Not ranked, (B- 8- 3)13ddd   Bear River Refuge Unit 5 drain">
+<area shape="RECT" coords="153, 60, 161, 68" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=412522112053901" alt="412522112053901: Flow=185cfs,Stage=4.35ft,2013-03-31 16:15,Not ranked, (B- 8- 2)17cdc Bear River Wetland Unit5C Outflow" title="412522112053901: Flow=185cfs,Stage=4.35ft,2013-03-31 16:15,Not ranked, (B- 8- 2)17cdc Bear River Wetland Unit5C Outflow">
+<area shape="RECT" coords="153, 60, 161, 68" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=412522112053801" alt="412522112053801: Stage=2.80ft,2013-02-14 14:15,Not ranked,Willard Spur near 5C Outflow" title="412522112053801: Stage=2.80ft,2013-02-14 14:15,Not ranked,Willard Spur near 5C Outflow">
+<area shape="RECT" coords="148, 60, 156, 68" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=412458112130601" alt="412458112130601: Flow=246cfs,Stage=4.18ft,2013-03-31 16:15,Not ranked, (B- 8- 3)19add   Bear River Refuge O-line canal" title="412458112130601: Flow=246cfs,Stage=4.18ft,2013-03-31 16:15,Not ranked, (B- 8- 3)19add   Bear River Refuge O-line canal">
+<area shape="RECT" coords="147, 80, 155, 88" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=410401112134801" alt="410401112134801: Flow=1090cfs,Stage=7.63ft,2013-04-01 08:15,Not ranked,GSL FARMINGTON BAY OUTFLOW AT CAUSEWAY BRIDGE" title="410401112134801: Flow=1090cfs,Stage=7.63ft,2013-04-01 08:15,Not ranked,GSL FARMINGTON BAY OUTFLOW AT CAUSEWAY BRIDGE">
+<area shape="RECT" coords="145, 105, 153, 113" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=403835112171801" alt="403835112171801: Flow=3.8cfs,Stage=1.65ft,2013-04-01 08:30,Not ranked, (C- 2- 4)15cac-S1 MILL SPRING NR ERDA, UT" title="403835112171801: Flow=3.8cfs,Stage=1.65ft,2013-04-01 08:30,Not ranked, (C- 2- 4)15cac-S1 MILL SPRING NR ERDA, UT">
+<area shape="RECT" coords="88, 275, 96, 283" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=373909113314201" alt="373909113314201: Stage=5360.43ft,2011-11-18 02:45,Not ranked, (C-36-15)22cbc   NCR-2 NEAR NEWCASTLE UTAH" title="373909113314201: Stage=5360.43ft,2011-11-18 02:45,Not ranked, (C-36-15)22cbc   NCR-2 NEAR NEWCASTLE UTAH">
+<area shape="RECT" coords="62, 215, 70, 223" href="http://waterdata.usgs.gov/nv/nwis/uv?site_no=102432241" alt="102432241: Flow=3.5cfs,Stage=5.75ft,2013-04-01 07:30,Not ranked,BIG SPGS CK NORTH CHANNEL NR BAKER, NV" title="102432241: Flow=3.5cfs,Stage=5.75ft,2013-04-01 07:30,Not ranked,BIG SPGS CK NORTH CHANNEL NR BAKER, NV">
+<area shape="RECT" coords="62, 215, 70, 223" href="http://waterdata.usgs.gov/nv/nwis/uv?site_no=10243224" alt="10243224: Flow=5.5cfs,Stage=8.23ft,2013-04-01 07:30,Not ranked,BIG SPGS CK SOUTH CHANNEL NR BAKER, NV" title="10243224: Flow=5.5cfs,Stage=8.23ft,2013-04-01 07:30,Not ranked,BIG SPGS CK SOUTH CHANNEL NR BAKER, NV">
+<area shape="RECT" coords="88, 277, 96, 285" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10242300" alt="10242300: Not ranked,Site discontinued,PINTO CREEK NEAR NEWCASTLE, UTAH" title="10242300: Not ranked,Site discontinued,PINTO CREEK NEAR NEWCASTLE, UTAH">
+<area shape="RECT" coords="122, 241, 130, 249" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10237000" alt="10237000: Not ranked,Site discontinued,BEAVER RIVER AT ADAMSVILLE, UT" title="10237000: Not ranked,Site discontinued,BEAVER RIVER AT ADAMSVILLE, UT">
+<area shape="RECT" coords="131, 240, 139, 248" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10234500" alt="10234500: Flow=33cfs,Stage=1.18ft,2013-03-31 17:00,Not ranked,BEAVER RIVER NEAR BEAVER, UT" title="10234500: Flow=33cfs,Stage=1.18ft,2013-03-31 17:00,Not ranked,BEAVER RIVER NEAR BEAVER, UT">
+<area shape="RECT" coords="140, 171, 148, 179" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10224000" alt="10224000: Flow=22cfs,Stage=2.16ft,2013-03-31 17:00,Not ranked,SEVIER RIVER NEAR LYNNDYL, UT" title="10224000: Flow=22cfs,Stage=2.16ft,2013-03-31 17:00,Not ranked,SEVIER RIVER NEAR LYNNDYL, UT">
+<area shape="RECT" coords="76, 153, 84, 161" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10172875" alt="10172875: Not ranked,Site discontinued,GRANITE CREEK NEAR CALLAO, UT" title="10172875: Not ranked,Site discontinued,GRANITE CREEK NEAR CALLAO, UT">
+<area shape="RECT" coords="75, 155, 83, 163" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10172870" alt="10172870: Flow=1.9cfs,Stage=2.82ft,2013-03-31 17:00,Not ranked,TROUT CREEK NEAR CALLAO, UT" title="10172870: Flow=1.9cfs,Stage=2.82ft,2013-03-31 17:00,Not ranked,TROUT CREEK NEAR CALLAO, UT">
+<area shape="RECT" coords="68, 171, 76, 179" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10172860" alt="10172860: Flow=19cfs,Stage=2.14ft,2013-03-31 17:15,Not ranked,WARM CREEK NEAR GANDY, UT" title="10172860: Flow=19cfs,Stage=2.14ft,2013-03-31 17:15,Not ranked,WARM CREEK NEAR GANDY, UT">
+<area shape="RECT" coords="138, 132, 146, 140" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10172727" alt="10172727: Flow=1.2cfs,Stage=5.60ft,2013-04-01 08:45,Not ranked,FAUST CREEK NEAR VERNON, UT" title="10172727: Flow=1.2cfs,Stage=5.60ft,2013-04-01 08:45,Not ranked,FAUST CREEK NEAR VERNON, UT">
+<area shape="RECT" coords="153, 95, 161, 103" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10172630" alt="10172630: Flow=103cfs,Stage=9.25ft,2013-03-31 17:00,Not ranked,GOGGIN DRAIN NEAR MAGNA UTAH" title="10172630: Flow=103cfs,Stage=9.25ft,2013-03-31 17:00,Not ranked,GOGGIN DRAIN NEAR MAGNA UTAH">
+<area shape="RECT" coords="160, 99, 168, 107" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10171000" alt="10171000: Flow=116cfs,Stage=1.79ft,Floodstage=10.6ft,2013-03-31 17:00,Not ranked,JORDAN RIVER @ 1700 SOUTH @ SALT LAKE CITY, UT" title="10171000: Flow=116cfs,Stage=1.79ft,Floodstage=10.6ft,2013-03-31 17:00,Not ranked,JORDAN RIVER @ 1700 SOUTH @ SALT LAKE CITY, UT">
+<area shape="RECT" coords="161, 103, 169, 111" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10168000" alt="10168000: Flow=2.4cfs,Stage=0.25ft,2013-04-01 08:45,Not ranked,LITTLE COTTONWOOD CREEK @ JORDAN RIVER NR SLC" title="10168000: Flow=2.4cfs,Stage=0.25ft,2013-04-01 08:45,Not ranked,LITTLE COTTONWOOD CREEK @ JORDAN RIVER NR SLC">
+<area shape="RECT" coords="152, 112, 160, 120" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10167170" alt="10167170: Flow=1.1cfs,Stage=1.04ft,2013-04-01 09:00,Not ranked,BUTTERFIELD CREEK NEAR LARK, UTAH" title="10167170: Flow=1.1cfs,Stage=1.04ft,2013-04-01 09:00,Not ranked,BUTTERFIELD CREEK NEAR LARK, UTAH">
+<area shape="RECT" coords="180, 115, 188, 123" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10157500" alt="10157500: Stage=0.74ft,2013-04-01 08:30:00,Not ranked,Rating being developed or revised,DANIELS CREEK AT CHARLESTON, UT" title="10157500: Stage=0.74ft,2013-04-01 08:30:00,Not ranked,Rating being developed or revised,DANIELS CREEK AT CHARLESTON, UT">
+<area shape="RECT" coords="180, 114, 188, 122" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10156000" alt="10156000: Flow=42cfs,Stage=2.83ft,2013-03-31 17:15,Not ranked,SNAKE CREEK NEAR CHARLESTON, UT" title="10156000: Flow=42cfs,Stage=2.83ft,2013-03-31 17:15,Not ranked,SNAKE CREEK NEAR CHARLESTON, UT">
+<area shape="RECT" coords="180, 114, 188, 122" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10155500" alt="10155500: Flow=158cfs,Stage=3.66ft,2013-04-01 08:30,Not ranked,PROVO RIVER NEAR CHARLESTON, UT" title="10155500: Flow=158cfs,Stage=3.66ft,2013-04-01 08:30,Not ranked,PROVO RIVER NEAR CHARLESTON, UT">
+<area shape="RECT" coords="181, 110, 189, 118" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10155200" alt="10155200: Flow=130cfs,Stage=0.81ft,2013-04-01 08:30,Not ranked,PROVO RIV AT RIV ROAD BRIDGE NR HEBER CITY, UT" title="10155200: Flow=130cfs,Stage=0.81ft,2013-04-01 08:30,Not ranked,PROVO RIV AT RIV ROAD BRIDGE NR HEBER CITY, UT">
+<area shape="RECT" coords="173, 131, 181, 139" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10153100" alt="10153100: Flow=27cfs,Stage=4.57ft,2013-04-01 08:30,Not ranked,HOBBLE CREEK AT 1650 WEST AT SPRINGVILLE, UTAH" title="10153100: Flow=27cfs,Stage=4.57ft,2013-04-01 08:30,Not ranked,HOBBLE CREEK AT 1650 WEST AT SPRINGVILLE, UTAH">
+<area shape="RECT" coords="176, 139, 184, 147" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10150500" alt="10150500: Flow=120cfs,Stage=3.45ft,Floodstage=9ft,2013-03-31 17:15,Not ranked,SPANISH FORK AT CASTILLA, UT" title="10150500: Flow=120cfs,Stage=3.45ft,Floodstage=9ft,2013-03-31 17:15,Not ranked,SPANISH FORK AT CASTILLA, UT">
+<area shape="RECT" coords="184, 137, 192, 145" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10149400" alt="10149400: Flow=58cfs,Stage=5.00ft,2013-03-31 16:15,Not ranked,DIAMOND FORK ABV RED HOLLOW NR THISTLE, UT" title="10149400: Flow=58cfs,Stage=5.00ft,2013-03-31 16:15,Not ranked,DIAMOND FORK ABV RED HOLLOW NR THISTLE, UT">
+<area shape="RECT" coords="187, 135, 195, 143" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10149000" alt="10149000: Flow=36cfs,Stage=4.42ft,2013-03-31 17:15,Not ranked,SIXTH WATER CRK AB SYAR TUN NR SPRINGVILLE, UT" title="10149000: Flow=36cfs,Stage=4.42ft,2013-03-31 17:15,Not ranked,SIXTH WATER CRK AB SYAR TUN NR SPRINGVILLE, UT">
+<area shape="RECT" coords="168, 158, 176, 166" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10145400" alt="10145400: Flow=8.5cfs,Stage=4.25ft,2013-04-01 08:45,Not ranked,SALT CRK BL NEPHI POWERPLANT DIV NR NEPHI, UT" title="10145400: Flow=8.5cfs,Stage=4.25ft,2013-04-01 08:45,Not ranked,SALT CRK BL NEPHI POWERPLANT DIV NR NEPHI, UT">
+<area shape="RECT" coords="158, 71, 166, 79" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10140700" alt="10140700: Flow=27cfs,Stage=4.71ft,2013-04-01 08:30,Not ranked,OGDEN RIVER NR GIBSON AVENUE AT OGDEN, UT" title="10140700: Flow=27cfs,Stage=4.71ft,2013-04-01 08:30,Not ranked,OGDEN RIVER NR GIBSON AVENUE AT OGDEN, UT">
+<area shape="RECT" coords="163, 70, 171, 78" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10140100" alt="10140100: Flow=14cfs,Stage=1.37ft,Floodstage=7.5ft,2013-04-01 08:30,Not ranked,OGDEN RIVER BL PINEVIEW RES NR HUNTSVILLE, UT" title="10140100: Flow=14cfs,Stage=1.37ft,Floodstage=7.5ft,2013-04-01 08:30,Not ranked,OGDEN RIVER BL PINEVIEW RES NR HUNTSVILLE, UT">
+<area shape="RECT" coords="175, 92, 183, 100" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10133980" alt="10133980: Flow=40cfs,Stage=4.14ft,2013-03-31 17:00,Not ranked,EAST CANYON CREEK AB EAST CYN RES NR MORGAN, UTAH" title="10133980: Flow=40cfs,Stage=4.14ft,2013-03-31 17:00,Not ranked,EAST CANYON CREEK AB EAST CYN RES NR MORGAN, UTAH">
+<area shape="RECT" coords="176, 98, 184, 106" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10133800" alt="10133800: Flow=31cfs,Stage=5.15ft,Floodstage=8.1ft,2013-03-31 17:15,Not ranked,EAST CANYON CREEK NEAR JEREMY RANCH, UT" title="10133800: Flow=31cfs,Stage=5.15ft,Floodstage=8.1ft,2013-03-31 17:15,Not ranked,EAST CANYON CREEK NEAR JEREMY RANCH, UT">
+<area shape="RECT" coords="178, 100, 186, 108" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10133650" alt="10133650: Flow=16cfs,Stage=5.49ft,Floodstage=9.3ft,2013-04-01 08:30,Not ranked,E CANYON CR BL I-80 REST STOP NR PARK CITY, UT" title="10133650: Flow=16cfs,Stage=5.49ft,Floodstage=9.3ft,2013-04-01 08:30,Not ranked,E CANYON CR BL I-80 REST STOP NR PARK CITY, UT">
+<area shape="RECT" coords="177, 102, 185, 110" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10133600" alt="10133600: Flow=13cfs,Stage=6.38ft,Floodstage=8.9ft,2013-04-01 08:30,Not ranked,MCLEOD CREEK NEAR PARK CITY, UT" title="10133600: Flow=13cfs,Stage=6.38ft,Floodstage=8.9ft,2013-04-01 08:30,Not ranked,MCLEOD CREEK NEAR PARK CITY, UT">
+<area shape="RECT" coords="181, 86, 189, 94" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10132000" alt="10132000: Flow=0.76cfs,Stage=1.00ft,Floodstage=6ft,2013-03-31 17:15,Not ranked,WEBER RIVER AT ECHO, UT" title="10132000: Flow=0.76cfs,Stage=1.00ft,Floodstage=6ft,2013-03-31 17:15,Not ranked,WEBER RIVER AT ECHO, UT">
+<area shape="RECT" coords="180, 99, 188, 107" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10129900" alt="10129900: Flow=4.3cfs,Stage=4.07ft,Floodstage=7.7ft,2013-04-01 08:30,Not ranked,SILVER CREEK NEAR SILVER CREEK JUNCTION, UT" title="10129900: Flow=4.3cfs,Stage=4.07ft,Floodstage=7.7ft,2013-04-01 08:30,Not ranked,SILVER CREEK NEAR SILVER CREEK JUNCTION, UT">
+<area shape="RECT" coords="189, 99, 197, 107" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10128500" alt="10128500: Flow=65cfs,Stage=5.10ft,Floodstage=9.2ft,2013-03-31 17:15,Not ranked,WEBER RIVER NEAR OAKLEY, UT" title="10128500: Flow=65cfs,Stage=5.10ft,Floodstage=9.2ft,2013-03-31 17:15,Not ranked,WEBER RIVER NEAR OAKLEY, UT">
+<area shape="RECT" coords="167, 42, 175, 50" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10108400" alt="10108400: Not ranked,Temporarily unavailable,LOGAN,HYD PK AND SMTHFLD CANAL AT HEAD NR LOGAN UT" title="10108400: Not ranked,Temporarily unavailable,LOGAN,HYD PK AND SMTHFLD CANAL AT HEAD NR LOGAN UT">
+<area shape="RECT" coords="163, 51, 171, 59" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10105900" alt="10105900: Flow=90cfs,Stage=6.09ft,Floodstage=9.7ft,2013-04-01 08:45,Not ranked,LITTLE BEAR RIVER AT PARADISE, UT" title="10105900: Flow=90cfs,Stage=6.09ft,Floodstage=9.7ft,2013-04-01 08:45,Not ranked,LITTLE BEAR RIVER AT PARADISE, UT">
+<area shape="RECT" coords="200, 30, 208, 38" href="http://waterdata.usgs.gov/wy/nwis/uv?site_no=10028500" alt="10028500: Flow=66cfs,Stage=2.18ft,2013-04-01 08:15,Not ranked,BEAR RIVER BELOW PIXLEY DAM, NEAR COKEVILLE, WY" title="10028500: Flow=66cfs,Stage=2.18ft,2013-04-01 08:15,Not ranked,BEAR RIVER BELOW PIXLEY DAM, NEAR COKEVILLE, WY">
+<area shape="RECT" coords="201, 69, 209, 77" href="http://waterdata.usgs.gov/wy/nwis/uv?site_no=10016900" alt="10016900: Flow=198cfs,Stage=1.73ft,Floodstage=9ft,2013-04-01 09:00,Not ranked,BEAR RIVER AT EVANSTON, WY" title="10016900: Flow=198cfs,Stage=1.73ft,Floodstage=9ft,2013-04-01 09:00,Not ranked,BEAR RIVER AT EVANSTON, WY">
+<area shape="RECT" coords="136, 69, 144, 77" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10010100" alt="10010100: Stage=4196.2ft,Floodstage=4204ft,2013-04-01 08:15,Not ranked,GREAT SALT LAKE NEAR SALINE, UT" title="10010100: Stage=4196.2ft,Floodstage=4204ft,2013-04-01 08:15,Not ranked,GREAT SALT LAKE NEAR SALINE, UT">
+<area shape="RECT" coords="143, 71, 151, 79" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10010060" alt="10010060: Stage=7.55ft,2013-04-01 08:15,Not ranked,Very low value,Bear River Bay Outflow at Causeway Brg nr Warren," title="10010060: Stage=7.55ft,2013-04-01 08:15,Not ranked,Very low value,Bear River Bay Outflow at Causeway Brg nr Warren,">
+<area shape="RECT" coords="121, 71, 129, 79" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10010020" alt="10010020: Flow=1530cfs,Stage=9.03ft,2013-03-31 17:00,Not ranked,GSL BREACH AT LAKESIDE, UT" title="10010020: Flow=1530cfs,Stage=9.03ft,2013-03-31 17:00,Not ranked,GSL BREACH AT LAKESIDE, UT">
+<area shape="RECT" coords="148, 99, 156, 107" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=10010000" alt="10010000: Stage=4196.8ft,2013-04-01 08:45,Not ranked,GREAT SALT LAKE AT SALTAIR BOAT HARBOR, UT" title="10010000: Stage=4196.8ft,2013-04-01 08:45,Not ranked,GREAT SALT LAKE AT SALTAIR BOAT HARBOR, UT">
+<area shape="RECT" coords="64, 285, 72, 293" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09413900" alt="09413900: Flow=5.9cfs,Stage=4.90ft,2013-03-31 17:00,Not ranked,BEAVER DAM WASH NEAR ENTERPRISE, UT" title="09413900: Flow=5.9cfs,Stage=4.90ft,2013-03-31 17:00,Not ranked,BEAVER DAM WASH NEAR ENTERPRISE, UT">
+<area shape="RECT" coords="73, 317, 81, 325" href="http://waterdata.usgs.gov/az/nwis/uv?site_no=09413700" alt="09413700: Flow=24cfs,Stage=5.99ft,2013-04-01 07:15,Not ranked,VIRGIN RV ABV THE NARROWS NR LITTLEFIELD, AZ" title="09413700: Flow=24cfs,Stage=5.99ft,2013-04-01 07:15,Not ranked,VIRGIN RV ABV THE NARROWS NR LITTLEFIELD, AZ">
+<area shape="RECT" coords="80, 312, 88, 320" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09413500" alt="09413500: Flow=39cfs,Stage=5.17ft,2013-04-01 08:30,Not ranked,VIRGIN RIVER NEAR ST. GEORGE, UT" title="09413500: Flow=39cfs,Stage=5.17ft,2013-04-01 08:30,Not ranked,VIRGIN RIVER NEAR ST. GEORGE, UT">
+<area shape="RECT" coords="84, 308, 92, 316" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09413000" alt="09413000: Flow=11cfs,Stage=6.24ft,Floodstage=13.9ft,2013-03-31 17:00,Not ranked,SANTA CLARA RIVER AT ST. GEORGE, UT" title="09413000: Flow=11cfs,Stage=6.24ft,Floodstage=13.9ft,2013-03-31 17:00,Not ranked,SANTA CLARA RIVER AT ST. GEORGE, UT">
+<area shape="RECT" coords="77, 296, 85, 304" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09409880" alt="09409880: Flow=17cfs,Stage=1.68ft,Floodstage=5.8ft,2013-03-31 17:15,Not ranked,SANTA CLARA RIVER AT GUNLOCK, UT" title="09409880: Flow=17cfs,Stage=1.68ft,Floodstage=5.8ft,2013-03-31 17:15,Not ranked,SANTA CLARA RIVER AT GUNLOCK, UT">
+<area shape="RECT" coords="83, 291, 91, 299" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09409100" alt="09409100: Flow=2.6cfs,Stage=10.22ft,2013-04-01 08:45,Not ranked,SANTA CLARA RIVER ABV BAKER RES, NR CENTRAL, UT" title="09409100: Flow=2.6cfs,Stage=10.22ft,2013-04-01 08:45,Not ranked,SANTA CLARA RIVER ABV BAKER RES, NR CENTRAL, UT">
+<area shape="RECT" coords="89, 291, 97, 299" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09408400" alt="09408400: Flow=9.6cfs,Stage=1.58ft,2013-03-31 17:00,Not ranked,SANTA CLARA RIVER NEAR PINE VALLEY, UT" title="09408400: Flow=9.6cfs,Stage=1.58ft,2013-03-31 17:00,Not ranked,SANTA CLARA RIVER NEAR PINE VALLEY, UT">
+<area shape="RECT" coords="90, 313, 98, 321" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09408195" alt="09408195: Flow=0.00cfs,Stage=3.29ft,2013-03-31 17:15,Not ranked,FORT PEARCE WASH NEAR ST. GEORGE, UT" title="09408195: Flow=0.00cfs,Stage=3.29ft,2013-03-31 17:15,Not ranked,FORT PEARCE WASH NEAR ST. GEORGE, UT">
+<area shape="RECT" coords="94, 303, 102, 311" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09408150" alt="09408150: Flow=67cfs,Stage=7.32ft,Floodstage=15ft,2013-03-31 17:15,Not ranked,VIRGIN RIVER NEAR HURRICANE, UT" title="09408150: Flow=67cfs,Stage=7.32ft,Floodstage=15ft,2013-03-31 17:15,Not ranked,VIRGIN RIVER NEAR HURRICANE, UT">
+<area shape="RECT" coords="95, 302, 103, 310" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09408135" alt="09408135: Flow=56cfs,Stage=6.04ft,2013-03-31 17:15,Not ranked,VIRGIN RIVER AB QUAIL CREEK NEAR HURRICANE, UT" title="09408135: Flow=56cfs,Stage=6.04ft,2013-03-31 17:15,Not ranked,VIRGIN RIVER AB QUAIL CREEK NEAR HURRICANE, UT">
+<area shape="RECT" coords="98, 302, 106, 310" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09406100" alt="09406100: Flow=40cfs,Stage=9.62ft,2013-03-31 17:00,Not ranked,VIRGIN RIVER AB LA VERKIN CREEK NR LA VERKIN, UT" title="09406100: Flow=40cfs,Stage=9.62ft,2013-03-31 17:00,Not ranked,VIRGIN RIVER AB LA VERKIN CREEK NR LA VERKIN, UT">
+<area shape="RECT" coords="113, 304, 121, 312" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09404900" alt="09404900: Flow=65cfs,Stage=5.39ft,2013-03-31 17:15,Not ranked,EAST FORK VIRGIN RIVER NEAR SPRINGDALE, UT" title="09404900: Flow=65cfs,Stage=5.39ft,2013-03-31 17:15,Not ranked,EAST FORK VIRGIN RIVER NEAR SPRINGDALE, UT">
+<area shape="RECT" coords="129, 294, 137, 302" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09404450" alt="09404450: Stage=11.30ft,2013-04-01 09:00:00,Not ranked,Rating being developed or revised,EAST FORK VIRGIN RIVER NEAR GLENDALE, UT" title="09404450: Stage=11.30ft,2013-04-01 09:00:00,Not ranked,Rating being developed or revised,EAST FORK VIRGIN RIVER NEAR GLENDALE, UT">
+<area shape="RECT" coords="131, 308, 139, 316" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09403600" alt="09403600: Flow=11cfs,Stage=9.83ft,2013-03-31 17:00,Not ranked,KANAB CREEK NEAR KANAB, UT" title="09403600: Flow=11cfs,Stage=9.83ft,2013-03-31 17:00,Not ranked,KANAB CREEK NEAR KANAB, UT">
+<area shape="RECT" coords="160, 308, 168, 316" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09381800" alt="09381800: Flow=15cfs,Stage=6.81ft,2013-03-31 17:00,Not ranked,PARIA RIVER NEAR KANAB, UTAH" title="09381800: Flow=15cfs,Stage=6.81ft,2013-03-31 17:00,Not ranked,PARIA RIVER NEAR KANAB, UTAH">
+<area shape="RECT" coords="274, 264, 282, 272" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09378170" alt="09378170: Flow=0.00cfs,2013-04-01 09:00,Stage=0.10ft,2013-03-31 17:00:00,Not ranked,SOUTH CREEK ABOVE RESERVOIR NEAR MONTICELLO, UT" title="09378170: Flow=0.00cfs,2013-04-01 09:00,Stage=0.10ft,2013-03-31 17:00:00,Not ranked,SOUTH CREEK ABOVE RESERVOIR NEAR MONTICELLO, UT">
+<area shape="RECT" coords="182, 180, 190, 188" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09319000" alt="09319000: Stage=0.29ft,2013-04-01 09:00:00,Not ranked,Seasonal site,EPHRAIM TUNNEL NEAR EPHRAIM, UT" title="09319000: Stage=0.29ft,2013-04-01 09:00:00,Not ranked,Seasonal site,EPHRAIM TUNNEL NEAR EPHRAIM, UT">
+<area shape="RECT" coords="238, 199, 246, 207" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09315000" alt="09315000: Flow=1740cfs,Stage=5.95ft,Floodstage=15ft,2013-03-31 17:00,Not ranked,GREEN RIVER AT GREEN RIVER, UT" title="09315000: Flow=1740cfs,Stage=5.95ft,Floodstage=15ft,2013-03-31 17:00,Not ranked,GREEN RIVER AT GREEN RIVER, UT">
+<area shape="RECT" coords="229, 184, 237, 192" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09314500" alt="09314500: Flow=24cfs,Stage=4.84ft,Floodstage=20.2ft,2013-04-01 08:30,Not ranked,PRICE RIVER AT WOODSIDE, UT" title="09314500: Flow=24cfs,Stage=4.84ft,Floodstage=20.2ft,2013-04-01 08:30,Not ranked,PRICE RIVER AT WOODSIDE, UT">
+<area shape="RECT" coords="216, 175, 224, 183" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09314280" alt="09314280: Flow=7.2cfs,Stage=3.20ft,2013-04-01 08:30,Not ranked,DESERT SEEP WASH NEAR WELLINGTON, UTAH" title="09314280: Flow=7.2cfs,Stage=3.20ft,2013-04-01 08:30,Not ranked,DESERT SEEP WASH NEAR WELLINGTON, UTAH">
+<area shape="RECT" coords="193, 158, 201, 166" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09310700" alt="09310700: Flow=12cfs,Stage=2.07ft,2013-04-01 09:00,Not ranked,MUD CRK BL WINTER QUARTERS CYN @ SCOFIELD, UT" title="09310700: Flow=12cfs,Stage=2.07ft,2013-04-01 09:00,Not ranked,MUD CRK BL WINTER QUARTERS CYN @ SCOFIELD, UT">
+<area shape="RECT" coords="192, 154, 200, 162" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09310500" alt="09310500: Stage=1.74ft,2013-03-31 16:15:00,Not ranked,Ice affected,FISH CREEK ABOVE RESERVOIR, NEAR SCOFIELD, UT" title="09310500: Stage=1.74ft,2013-03-31 16:15:00,Not ranked,Ice affected,FISH CREEK ABOVE RESERVOIR, NEAR SCOFIELD, UT">
+<area shape="RECT" coords="187, 161, 195, 169" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09309600" alt="09309600: Stage=1.27ft,2013-03-31 16:15:00,Not ranked,Seasonal site,FAIRVIEW TUNNEL NEAR FAIRVIEW, UT" title="09309600: Stage=1.27ft,2013-03-31 16:15:00,Not ranked,Seasonal site,FAIRVIEW TUNNEL NEAR FAIRVIEW, UT">
+<area shape="RECT" coords="253, 129, 261, 137" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09302000" alt="09302000: Flow=60cfs,Stage=5.00ft,2013-03-31 17:00,Not ranked,DUCHESNE RIVER NEAR RANDLETT, UT" title="09302000: Flow=60cfs,Stage=5.00ft,2013-03-31 17:00,Not ranked,DUCHESNE RIVER NEAR RANDLETT, UT">
+<area shape="RECT" coords="252, 127, 260, 135" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09301500" alt="09301500: Flow=13cfs,Stage=3.60ft,Floodstage=9.9ft,2013-04-01 08:45,Not ranked,UINTA RIVER AT RANDLETT, UT" title="09301500: Flow=13cfs,Stage=3.60ft,Floodstage=9.9ft,2013-04-01 08:45,Not ranked,UINTA RIVER AT RANDLETT, UT">
+<area shape="RECT" coords="238, 107, 246, 115" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09296800" alt="09296800: Stage=4.82ft,2013-04-01 08:30:00,Not ranked,Ice affected,UINTA R BLW POWERPLANT DIVERSION, NR NEOLA, UT" title="09296800: Stage=4.82ft,2013-04-01 08:30:00,Not ranked,Ice affected,UINTA R BLW POWERPLANT DIVERSION, NR NEOLA, UT">
+<area shape="RECT" coords="249, 129, 257, 137" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09295100" alt="09295100: Flow=45cfs,Stage=2.88ft,2013-04-01 08:45,Not ranked,DUCHESNE RIV ABV UINTA RIV, NR RANDLETT, UT" title="09295100: Flow=45cfs,Stage=2.88ft,2013-04-01 08:45,Not ranked,DUCHESNE RIV ABV UINTA RIV, NR RANDLETT, UT">
+<area shape="RECT" coords="228, 112, 236, 120" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09292500" alt="09292500: Stage=0.45ft,2013-04-01 09:00:00,Floodstage=4.7ft,Not ranked,Ice affected,YELLOWSTONE RIVER NEAR ALTONAH, UT" title="09292500: Stage=0.45ft,2013-04-01 09:00:00,Floodstage=4.7ft,Not ranked,Ice affected,YELLOWSTONE RIVER NEAR ALTONAH, UT">
+<area shape="RECT" coords="229, 110, 237, 118" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09292000" alt="09292000: Stage=3.73ft,2013-04-01 08:30:00,Not ranked,Ice affected,YELLOWSTONE R @ BRIDGE CMPGRND NR ALTONAH, UT" title="09292000: Stage=3.73ft,2013-04-01 08:30:00,Not ranked,Ice affected,YELLOWSTONE R @ BRIDGE CMPGRND NR ALTONAH, UT">
+<area shape="RECT" coords="220, 107, 228, 115" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09289500" alt="09289500: Stage=1.65ft,2013-04-01 08:45:00,Not ranked,Ice affected,LAKE FORK RIVER AB MOON LAKE, NR MOUNTAIN HOME, UT" title="09289500: Stage=1.65ft,2013-04-01 08:45:00,Not ranked,Ice affected,LAKE FORK RIVER AB MOON LAKE, NR MOUNTAIN HOME, UT">
+<area shape="RECT" coords="211, 134, 219, 142" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09285900" alt="09285900: Flow=31cfs,Stage=1.76ft,2013-03-31 16:15,Not ranked,STRAWBERRY RIVER AT PINNACLES NEAR FRUITLAND, UT" title="09285900: Flow=31cfs,Stage=1.76ft,2013-03-31 16:15,Not ranked,STRAWBERRY RIVER AT PINNACLES NEAR FRUITLAND, UT">
+<area shape="RECT" coords="257, 136, 265, 144" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09272400" alt="09272400: Flow=1610cfs,Stage=15.60ft,2013-04-01 09:00,Not ranked,GREEN RIVER AT OURAY, UTAH" title="09272400: Flow=1610cfs,Stage=15.60ft,2013-04-01 09:00,Not ranked,GREEN RIVER AT OURAY, UTAH">
+<area shape="RECT" coords="259, 108, 267, 116" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09266500" alt="09266500: Flow=16cfs,Stage=1.50ft,2013-03-13 15:45,Not ranked,ASHLEY CREEK NEAR VERNAL, UT" title="09266500: Flow=16cfs,Stage=1.50ft,2013-03-13 15:45,Not ranked,ASHLEY CREEK NEAR VERNAL, UT">
+<area shape="RECT" coords="266, 107, 274, 115" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09261700" alt="09261700: Flow=9.6cfs,Stage=0.32ft,2013-03-31 17:00,Not ranked,BIG BRUSH CRK ABV RED FLEET RES, NR VERNAL, UT" title="09261700: Flow=9.6cfs,Stage=0.32ft,2013-03-31 17:00,Not ranked,BIG BRUSH CRK ABV RED FLEET RES, NR VERNAL, UT">
+<area shape="RECT" coords="257, 84, 265, 92" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09230300" alt="09230300: Not ranked,Site discontinued,BIRCH SPRING DRAW AT FGNRA BOUNDARY NR MANILA, UT" title="09230300: Not ranked,Site discontinued,BIRCH SPRING DRAW AT FGNRA BOUNDARY NR MANILA, UT">
+<area shape="RECT" coords="257, 83, 265, 91" href="http://waterdata.usgs.gov/wy/nwis/uv?site_no=09229500" alt="09229500: Stage=1.79ft,2013-04-01 08:15:00,Floodstage=7ft,Not ranked,Ice affected,HENRYS FORK NEAR MANILA, UT" title="09229500: Stage=1.79ft,2013-04-01 08:15:00,Floodstage=7ft,Not ranked,Ice affected,HENRYS FORK NEAR MANILA, UT">
+<area shape="RECT" coords="226, 81, 234, 89" href="http://waterdata.usgs.gov/wy/nwis/uv?site_no=09220000" alt="09220000: Stage=3.37ft,2013-04-01 08:15:00,Floodstage=6.6ft,Not ranked,Ice affected,EAST FORK OF SMITHS FORK NEAR ROBERTSON, WY" title="09220000: Stage=3.37ft,2013-04-01 08:15:00,Floodstage=6.6ft,Not ranked,Ice affected,EAST FORK OF SMITHS FORK NEAR ROBERTSON, WY">
+<area shape="RECT" coords="271, 227, 279, 235" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09183600" alt="09183600: Flow=2.9cfs,Stage=1.46ft,2013-04-01 08:30,Not ranked,MILL CREEK BELOW SHELEY TUNNEL, NEAR MOAB, UT" title="09183600: Flow=2.9cfs,Stage=1.46ft,2013-04-01 08:30,Not ranked,MILL CREEK BELOW SHELEY TUNNEL, NEAR MOAB, UT">
+<area shape="RECT" coords="271, 228, 279, 236" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09183500" alt="09183500: Flow=4.8cfs,Stage=3.16ft,2013-04-01 09:00,Not ranked,MILL CREEK AT SHELEY TUNNEL, NEAR MOAB, UT" title="09183500: Flow=4.8cfs,Stage=3.16ft,2013-04-01 09:00,Not ranked,MILL CREEK AT SHELEY TUNNEL, NEAR MOAB, UT">
+<area shape="RECT" coords="269, 217, 277, 225" href="http://waterdata.usgs.gov/ut/nwis/uv?site_no=09182400" alt="09182400: Flow=6.0cfs,Stage=5.30ft,2013-04-01 08:45,Not ranked,CASTLE CREEK BELOW CASTLE VALLEY NEAR MOAB, UT" title="09182400: Flow=6.0cfs,Stage=5.30ft,2013-04-01 08:45,Not ranked,CASTLE CREEK BELOW CASTLE VALLEY NEAR MOAB, UT">
+<area shape="rect" coords="0,0,350,354" href="http://waterwatch.usgs.gov/?m=real&r=ut" title="Go to WaterWatch (offsite) for a larger map with additional options" alt="Go to WaterWatch (offsite) for a larger map with additional options">
+</map>
+
+
+
+
+</body></html>

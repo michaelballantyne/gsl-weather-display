@@ -1,0 +1,29 @@
+/*---------------------------------------------------------------------------------------------------------------------*/
+/* colormidblue.css: Format the Framework color scheme for the blue used in USGS Water sites     */
+/* Main body styles, site title bar color , top sub navigation bar, then left side bar styles  */
+/*---------------------------------------------------------------------------------------------------------------------*/
+
+h1, h2, h3 h4 {
+	color: #315aa1;
+}
+
+#usgstitle { 
+     background-color: #416ab1; 
+     color: #ffffff; 
+} 
+
+#subnav {
+	background-color: #666666;
+	font-weight: bold;
+	color: #111111;
+}
+
+#subnav a:hover, #subnav a:active {
+	color: #ffe854;
+}
+
+/*-------To use a gradient blue in the left-side H2, load colorblueleftgradient.css in your HTML file  --------- */
+#leftbar h2 {
+	background-image: none;
+	background-color: #416ab1;
+}

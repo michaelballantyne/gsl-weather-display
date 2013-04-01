@@ -1,0 +1,839 @@
+/*------------------------------------------------------------------------------------------------------*/
+/*   Framework stylesheet                                                                               */
+/*   Last update: November 2008 (first). Edited: Aug 3, 2011                                  */
+/*------------------------------------------------------------------------------------------------------*/
+/*   Main body styles                                                                                   */
+/*   The content pane has an ID of mainbody                                                             */
+/*------------------------------------------------------------------------------------------------------*/
+
+#mainbody {
+	padding-left: 20px;
+	vertical-align: top;
+}
+
+#mainbody p {
+	margin-bottom: 10px;
+}	
+
+/*----  List styles for #mainbody  ----*/
+#mainbody ul {
+	margin-top: 10px;
+}
+
+#mainbody ul, #mainbody ul li, #mainbody ol, #mainbody ol li {
+	padding-left: 0px;
+	margin-bottom: 0px;
+	margin-left: 12px;
+}
+
+#mainbody ul ul, #mainbody ul ul li, #mainbody ol ol, #mainbody ol ol li {
+	padding-left: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	margin-left: 12px;
+}
+
+#mainbody p + ul, p + ol  {
+	margin-top: -8px;
+}
+
+/*----  General hyperlink styles ----*/
+a:link {
+	color: #1144ff;
+	text-decoration: underline;
+}
+	
+a:visited {
+	color: purple;
+	text-decoration: underline;
+}
+	
+a:hover, a:active {
+	text-decoration: none;
+}
+
+
+/*----  ID, settings  for the main page table  ----*/
+#contenttable {
+	width: 100%;
+	clear: both;
+}
+
+/*----  Styles to set up a left and right content area (about 1/2 the width of the #mainbody content area). Using tables is an alternative to this. Needed to add clear:both to the leftside style as without a clear then when a window is expanded wide enough, the right side would appear below the left side.   ----*/
+.leftside {
+	float: left;
+	width: 48%;
+	clear: both;
+}
+
+.rightside {
+	float: right;
+	width: 48%;
+}
+
+
+/* --- Put a dark  line at the bottom of an object, usually a header -----*/
+.bottomborder {border-bottom-color: #333333;  border-bottom-style: solid; border-bottom-width: 1px;}
+
+.bottomborder2 {border-bottom-color: #333333;  border-bottom-style: solid; border-bottom-width: 2px;}
+
+.underlinewrap { margin-bottom: -5px; border-left: 1px solid #999999; border-bottom: 1px solid #999999; padding: 3px;  margin-top: 25px;
+}
+
+
+/* ---- Place a line above, below, or both, mainly for a text paragraph    ------ */
+.lineabovebelow {
+	border-top-width: 1px; 
+	border-bottom-width: 1px; 
+	border-bottom-style: solid; 
+	border-top-style: solid; 
+	padding-top: 2px; 
+	padding-bottom: 2px; 
+	border-color: #aaaaaa;
+}
+
+.lineabove {
+	border-top-width: 1px; 
+	border-top-style: solid; 
+	padding-top: 4px; 
+	padding-bottom: 4px; 
+	border-color: #aaaaaa;
+}
+
+.linebelow {
+	border-bottom-width: 1px; 
+	border-bottom-style: solid; 
+	padding-top: 2px; 
+	padding-bottom: 2px; 
+	border-color: #aaaaaa;
+}
+
+/*----  Add a faint border around any element  ----*/
+.addborders {
+    border-top: 1px solid #d9e0e6;
+	border-right: 1px solid #c8cdd2;
+	border-bottom: 1px solid #c8cdd2;
+	border-left: 1px solid #d9e0e6;
+   	padding: 4px; 
+}
+
+
+/*----   Vertically top-align contents in a table cell    ----*/
+td {vertical-align: top;}	
+tr {vertical-align: top;}	
+
+/*----  Formatting styles ----*/
+
+.clear {clear: both;}
+
+.forwebmaster {
+	color: green;
+	font-size: .9em;
+}
+
+/* May 2009: Generic styles for new blueish tables */
+	.tableblue table { width:95%; border:1px solid #c5cfd8; margin:1em auto; border-collapse:collapse; }
+	.tableblue caption { color: #4a6894; font-size:.95em;  font-weight: bold; margin:1em 0 0 0; padding:0;  text-align:center; } 
+	.tableblue tr td { background: #fcfcff } 
+	.tableblue tr.even td { background: #f5f9ff } 
+	.tableblue td { color: #577187; border:1px solid #c5cfd8; padding:.24em 1em;} 
+	.tableblue th {border: 1px solid #adc0d0; padding:.3em 1em; background:#e6ecf5;  font:bold 1.0em/1em "Century Gothic","Trebuchet MS",Arial,Helvetica,sans-serif; color:#4683b3} 
+	.subcaption {font-size: .9em; font-weight: normal;}
+	
+/* ----- Format for the tables in the Publications pages -----*/
+#tablepubs table {
+	width: 97%; 
+	margin-bottom: 10px; 
+	margin-top: 25px; 
+	border-collapse: collapse; 
+	clear: both;
+}
+	
+#tablepubs table tr {border-bottom: thin #888888 solid;}
+
+.marginbottom10 {margin-bottom:10px;}
+.paddingtop15 {padding-top:15px;}
+
+/*------------------------------------------------------------------------------------------------------*/
+/*   Boxheading styles                                                                                  */
+/*------------------------------------------------------------------------------------------------------*/
+
+.boxheading {
+	border-bottom: 1px solid #999999;
+	margin: 0px;
+	padding: 2px;
+	font-size: 100%;
+	padding-left: 10px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	margin-bottom: 8px;
+}
+
+.boxsection {
+	width: 98%;
+	border: 1px solid #cccccc;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	margin-top: 30px;
+}
+
+.boxsection p {
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: -8px;
+	margin-top: 8px;
+}
+.boxsection ul li {
+	padding-bottom: 3px;
+	padding-right: 10px;
+}
+
+.boxsection ul li ul li{
+	margin-left: -15px;
+}
+
+.boxsection ul li ul li ul li{
+	margin-left: -15px;
+}
+
+/*   Faint blue background color for the boxes in the Infodata section (Nov 08)     */
+.infodataboxbackground { background-color:#f4f8fd; }
+
+/*------------------------------------------------------------------------------------------------------*/
+/*   Infobox styles -  popup information boxes                                                          */
+/*------------------------------------------------------------------------------------------------------*/
+
+a.infobox {
+        position:relative; /*this is the key*/ 
+        z-index:24; 
+        color:#000; 
+        text-decoration:none 
+}
+
+a.infobox:hover {
+	z-index:25;
+	 background-color:#fff; 
+}
+
+a.infobox span {
+	display: none;
+	font-size: x-small;
+	text-decoration: none;
+	font-weight: normal;
+	visibility: hidden;
+}
+
+a.infobox:hover span { /*the span will display just on :hover state*/
+	display:block;
+	position:absolute;
+	top:15px;
+	border:1px solid #000;
+	background-color: #F1DDFF;
+	color: #000;
+	padding: 3px;
+	width: 250px;
+	visibility: visible;
+}
+
+.popuptext  {
+	border-bottom: dashed; 
+	border-bottom-width: 1px;
+	cursor: help;
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+/*   Top navigation bar style                                                                           */
+/*   default orange diamond layout                                                                      */
+/*------------------------------------------------------------------------------------------------------*/
+
+#topnav {
+	background-color: #222222;
+	width: 100%;
+	padding-top: 4px;
+	padding-bottom: 5px;
+	margin-bottom: 25px;
+	font-weight: bold;
+	font-size: .9em;
+	clear: both;
+}
+	
+#topnav img {
+		padding-left: 5px;
+}
+	
+#topnav a:link, #topnav a:visited {
+		color: white;
+		margin-right: 8px;
+		text-decoration: none;
+}
+	
+#topnav a:hover, #topnav a:active {
+		color: orange;
+		text-decoration: underline;
+		margin-right: 8px;
+}
+
+/*------    Top main navigation bar styles for use when "buttons" are desired    ------------*/
+
+#topnavbuttons {
+	margin-bottom: 23px;
+}
+
+#topnavbuttons ul {
+	padding-left: 0;
+	margin-left: 0;
+	background-color: #222;
+	color: white;
+	font-weight: bold;
+	font-size: .9em;
+	float: left;
+	width: 100%;
+	margin-top: -2px;
+	margin-bottom: 3px;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+
+#topnavbuttons ul li { 
+	display: inline; 
+	}
+
+#topnavbuttons ul li a {
+	padding: 0.37em .91em;
+	background-color: #222;
+	color: white;
+	text-decoration: none;
+	float: left;
+	border-right: 1px solid #fff;
+}
+
+#topnavbuttons ul li a:hover {
+	background-color: #049;
+	color: orange;
+	text-decoration: underline;
+}
+
+
+/*------------------------------------------------------------------------------------------------------*/
+/*   Top sub-navigation bar style                                                                       */
+/*------------------------------------------------------------------------------------------------------*/
+
+#subnav {
+	background-color: #666666;
+	font-weight: bold;
+	font-size: .85em;
+	width: 100%;
+	padding-top: 4px;
+	padding-bottom: 5px;
+	margin-top: -26px;
+	margin-bottom: 25px;
+	
+}
+	
+#subnav a:link, #subnav a:visited {
+	color: white;
+	margin-right: 8px;
+	text-decoration: none;
+	margin-left: 5px;
+}
+	
+#subnav a:hover, #subnav a:active {
+	color: orange;
+	margin-right: 8px;
+	margin-left: 5px;
+	text-decoration: underline;
+}
+
+
+
+/*------------------------------------------------------------------------------------------------------*/
+/*   Left sidebar style                                                                                 */
+/*------------------------------------------------------------------------------------------------------*/
+
+#leftbar a:visited  {
+		text-decoration: none;
+		color:blue;
+}	
+		
+#leftbar a:hover, #leftbar a:hover, #leftbar ul li a:hover, #leftbar ul li a:active, #leftbar ul li ul li a:hover, #leftbar ul li ul li a:active {
+		text-decoration: underline;
+}
+
+/*---------   General styles for the left side area, and for paragraphs, and for the H2 level headings    ----------*/
+#leftbar {
+	border-right: 1px solid gray;
+	font-size: .9em;
+	margin-left: 5px;	
+	margin-right: 20px;
+	padding-right: 15px;
+	margin-bottom: 20px;
+   	width: 200px;
+}
+
+#leftbar p {
+	margin-top:.5em;
+	margin-bottom:.5em
+}
+
+/*---------   This is the default leftbar header, which is the gradient blue, with white text. If you change to a different color text, also change the background color to match.    -------*/
+#leftbar h2 {
+	background-color: #004499;
+	font-size: 100%;
+	padding: 4px;
+	font-weight: bold;
+	color: #ffffff;
+	margin-top: 12px;
+	margin-bottom: 10px;
+}
+
+/*---------   Lists in the left bar need lots of reformatting, especially horizontal and vertical spacing, and it has to extend down to 3 nested levels.   ----------*/
+#leftbar ul, #leftbar ul li, #leftbar ul li ul li {
+	list-style-type: none;
+	color: #333333;
+	padding-left: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 5px;
+}
+
+#leftbar ul {
+	margin-bottom: 15px;
+}
+	
+#leftbar ul li a:link {
+	text-decoration: none;
+}
+	
+#leftbar ul li ul li {
+	list-style-type: disc;
+	font-weight: normal;
+	line-height: 1.2em;
+	color: #333333;
+	padding-top: 2px;
+	margin-bottom: 1px;
+	margin-left: 15px;		
+}
+	
+#leftbar ul li ul li ul li {
+	list-style-type: circle;
+	margin-left: 10px;	
+}
+	
+#leftbar ul li ul {
+	margin-bottom: 0px;
+}
+	
+#leftbar ul li ul li a:link, #leftbar ul li ul li  {
+	text-decoration: none;
+}
+
+
+/*------------------------------------------------------------------------------------------------------*/
+/*   Footer style                                                                                       */
+/*------------------------------------------------------------------------------------------------------*/
+
+#linksfooterbar {
+	width: 100%;
+	background-color: #cccccc;
+	padding-top: 2px;
+	padding-bottom: 3px;
+	clear: both;
+	margin-bottom: 0px;
+}
+
+#linksfooterbar a:link, #linksfooterbar a:visited {
+	margin-left: 3px;
+	margin-right: 14px;
+	color: #111111;
+	text-decoration: none;
+}
+
+#linksfooterbar a:hover {
+	margin-left: 3px;
+	margin-right: 14px;
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+#linksfooterbar a:active {
+	margin-left: 3px;
+	margin-right: 14px;
+	color: #111111;
+	text-decoration: none;
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+/*   Text styles                                                                                        */
+/*------------------------------------------------------------------------------------------------------*/
+
+/*----  Caption styles for text (enlarged Aug 2011)    ----*/
+.caption {
+	font-size: .1.0em;
+	margin-bottom: 15px;
+	line-height: 1.2em;
+	margin-top: 2px;
+	text-align: left;
+	color: #333333;
+}
+.caption p { margin-top: 5px; margin-bottom: 4px;}
+
+.smaller  {font-size: .9em;}
+.small80  {font-size: .8em;}
+.larger  {font-size: 120%;}
+.bold {font-weight: bold;}
+.boldsmaller {font-weight: bold; font-size: .9em; }
+.italics {font-style: italic;}
+.underline {text-decoration:underline}
+.headingunderline { 
+	margin-bottom: 5px; /*why doesn't this work? */
+	font-size: 100%; 
+	border-bottom: 1px solid #004499; 
+	padding-top: 2px; 
+	padding-bottom: 4px; 
+}
+
+.alignleft {text-align: left;}
+.alignright {text-align: right;}
+.center {text-align: center;}
+.middle {vertical-align: middle;}
+	
+.indentfirstline {
+	padding-left: -25px;
+	text-indent: 25px;
+}
+.outdent {
+	padding-left: 25px;
+	text-indent: -25px;
+}
+.reference {
+	  margin-left: 2em;
+      text-indent: -2em;
+      margin-right: 3em; 
+}  
+
+
+/*----   TOC Indenting. Updated HAP 2/27/08. 3/08: Indents were not working if lines were in the #mainbody area of a table, had to add another set of them.  ----*/
+.indent1 {margin-left: 0em;  margin-top: .1em; margin-bottom: 0em;}   
+.indent2 {margin-left: 2em;  margin-top: .1em; margin-bottom: 0em;;}  
+.indent3 {margin-left: 4em;  margin-top: .1em; margin-bottom: 0em;}      
+.indent4 {margin-left: 6em;  margin-top: .1em; margin-bottom: 0em;}  
+.indent5 {margin-left: 8em;  margin-top: .1em; margin-bottom: 0em;}  
+.indent6 {margin-left: 10em;  margin-top: .1em; margin-bottom: 0em;}  
+
+#mainbody .indent1 {margin-left: 0em;  margin-top: .1em; margin-bottom: 0em;}   
+#mainbody .indent2 {margin-left: 2em;  margin-top: .1em; margin-bottom: 0em;;}  
+#mainbody .indent3 {margin-left: 4em;  margin-top: .1em; margin-bottom: 0em;}      
+#mainbody .indent4 {margin-left: 6em;  margin-top: .1em; margin-bottom: 0em;}  
+#mainbody .indent5 {margin-left: 8em;  margin-top: .1em; margin-bottom: 0em;}  
+#mainbody .indent6 {margin-left: 10em;  margin-top: .1em; margin-bottom: 0em;}  
+
+/*----  Heading styles, generally for #mainbody  ----*/
+h1 {
+	color: #003388;
+	font-size: 140%;
+	margin-top: 0px;
+}
+	
+h2 {
+	color: #003388;
+	font-size: 110%;
+	margin-top: 20px;
+	margin-bottom: -5px;
+}
+	
+h3 {
+	color: #003388;
+	font-size: 95%;
+	margin-bottom: -5px;
+}
+	
+h4 {
+	color: #003388;
+	margin-bottom: -5px;
+	font-size: 85%;
+}
+	
+h5 {
+	color: #003388;
+	margin-bottom: -5px;
+	font-size: 80%;
+}
+	
+h6 {
+	color: #003388;
+	margin-bottom: -5px;
+	font-size: 80%;
+}
+
+/*----  Margins, padding  ----*/
+marginbottom10 {
+	margin-bottom: 10px;
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+/*   Image styles                                                                                       */
+/*------------------------------------------------------------------------------------------------------*/
+
+img {
+	border: none;
+}
+
+/*----  Center an image horizontally, on its own line  ----*/
+.imgcenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*----  Center a table; contents left justified inside of TDs (09/2009)  ----*/
+.centertable  table {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+}
+
+/*----  Use class=picleft/picright to float an image inside of a text paragraph (apply style to image) or DIV element (apply style to DIV).
+		Use DIV if you want to include a caption with the image ----*/
+.picleft  {
+	float: left;
+	margin-right: 12px;
+}
+
+.picright {
+	float: right;
+	margin-left: 12px;
+}
+
+/*----  Caption styles for text when enclosed in a picleft/picright DIV   ----*/
+.picleft p, .picright p, .picleftborder p, .picrightborder p {
+	font-size: 75%;
+	margin-bottom: 15px;
+	line-height: 1.2em;
+	margin-top: 2px;
+	text-align: left;
+}
+
+/*----  Get pictures/text to format consistently below H-level headings  ----*/
+h2 + .picleft, h3 + .picleft, h4 + .picleft, h5 + .picleft  {
+	float: left;
+	margin-right: 12px;
+	margin-top: 20px;
+}
+
+h2 + .picright, h3 + .picright, h4 + .picright, h5 + .picright  {
+	float: right;
+	margin-left: 12px;
+	margin-top: 20px;
+}
+
+/*     * html is used for properties that only MSIE6 can understand.      */           
+* html .picleft, * html .picright {
+	margin-top: 12px;
+}
+
+
+/*----  Use class=picleftborder/picrightborder to frame an image and float it inside of a text paragraph.
+		Only apply this style to image 
+		To have a framed image inside a DIV with a caption, set the DIV class to picleft/picright and set the image class 		               to "addborder" ----*/	
+.picleftborder{
+	float: left;
+	border-top: 1px solid #D9E0E6;
+	border-right: 1px solid #C8CDD2;
+	border-bottom: 1px solid #C8CDD2;
+	border-left: 1px solid #D9E0E6;	
+	padding: 4px;
+	margin-right: 10px;
+}
+
+.picrightborder{
+	float: right;
+	border-top: 1px solid #D9E0E6;
+	border-right: 1px solid #C8CDD2;
+	border-bottom: 1px solid #C8CDD2;
+	border-left: 1px solid #D9E0E6;	
+	padding: 4px;
+	margin-right: 10px;
+}
+
+
+
+/*------------------------------------------------------------------------------------------------------*/
+/*   Color styles                                                                                       */
+/*------------------------------------------------------------------------------------------------------*/
+
+.white { color: #fff; }
+.black { color: #000; }
+.blue {	color: #0033aa; }
+.midblue {	color: #416ab1; }
+.greymed { color: #666666; }
+.greydark { color: #414141; }
+.red { color: #992255; }
+.green { color: #227a22; }
+.brown { color: #7c4f3f; }
+.purple { color: #722072; }
+.gold { color: #797909; }
+.palegreen { #2a3e19; }
+
+/*--------------------------------------------------------------------------------------*/
+/* ----- Styles to format list item bullets  --------  */
+.listdotblue {
+	list-style-image: url('/frameworkfiles/images/icons/dotblue7.gif');
+}
+.listdotgreen {
+	list-style-image: url('/frameworkfiles/images/icons/dotgreen7.gif');
+}
+.listdotbrown {
+	list-style-image: url('/frameworkfiles/images/icons/dotbrown7.gif');
+}
+.listdotcyan {
+	list-style-image: url('/frameworkfiles/images/icons/dotcyan7.gif');
+}
+.listdotyellow {
+	list-style-image: url('/frameworkfiles/images/icons/dotyellow7.gif');
+}
+/*----     Background colors for elements, such as for table cells. These styles are generally light in shade. These styles are not meant for heading backgrounds (those are further down).   ----*/
+.backgreylight {
+	background-color: #f6f6f6;}
+.backgreymedium {
+	background-color: #d4d4d4;}
+.backgreydark {
+	background-color: #777777;}
+.backgreydarker {
+	background-color: #4a4a4a;}
+.backbrowndark {
+	background-color: #928472;}
+.backbrownmedium {
+	background-color: #ddcdaf;}
+.backbrownlight {
+	background-color: #fdf2df;}
+.backbluedark {
+	background-color: #114499;}
+.backbluemedium {
+	background-color: #88aaee;}
+.backbluelight {
+	background-color: #bbd6fa;}
+.backmidblue {
+	background-color: #416ab1;}
+.backgreendark {
+	background-color: #206528;}
+.backgreenmedium {
+	background-color: #82d082;}
+.backgreenlight {
+	background-color: #cff4d8;}
+.backtealdark {
+	background-color: #304c6a;}
+.backtealmedium {
+	background-color: #708cbf;}
+.backteallight {
+	background-color: #90acca;}
+.backtealverylight {
+	background-color: #b0ccea;}
+.backpalegreen {
+	background-color: #3a4e29;}
+.backpalegreenmedium {
+	background-color: #556e43;}
+.backpalegreenlight {
+	background-color: #6a8e59;}
+.backgreygreenlight {
+	background-color: #eef4ee;}
+.backgreygreenmedium {
+	background-color: #ccd5cc;}
+	
+/*----     Heading colors. These styles are generally meant for colorizing headings, as they add color to the heading text, background area, and add padding around the text.   ----*/
+.headblue {
+	background-color: #004499; padding: 4px; color: #ffffff;}
+.headmidblue {
+	background-color: #416ab1; padding: 4px; color: #ffffff;}
+.headburgundy {
+	background-color: #4c0722; padding: 4px; color: #ffffff;}
+.headgreen {
+	background-color: #3a4e29; padding: 4px; color: #ffffff;}
+.headlightbrown {
+	background-color: #905010; padding: 4px; color: #ffffff;}
+.headdarkbrown {
+	background-color: #4b3520; padding: 4px; color: #ffffff;}
+.headgold {
+	background-color: #9f8522; padding: 4px; color: #ffffff;}
+.headverylightgrey {
+	background-color: #d4d4d4; padding: 4px; color: #222222;}
+.headlightgrey {
+	background-color: #a2a2a2; padding: 4px; color: #222222;}
+.headgrey {
+	background-color: #747474; padding: 4px; color: #ffffff;}
+.headdarkgrey {
+	background-color: #444444; padding: 4px; color: #ffffff;}
+.headolive {
+	background-color: #444411; padding: 4px; color: #ffffff;}
+.headpurple {
+	background-color: #621062; padding: 4px; color: #ffffff;}
+.headtan {
+	background-color: #82643c; padding: 4px; color: #ffffff;}
+.headteal {
+	background-color: #304c6a; padding: 4px; color: #ffffff;}
+.headpalegreen {
+	background-color: #3a4e29; padding: 4px; color: #ffffff;}
+	
+/*----   Color slice for background to make gradient bars   ----*/
+.backgradientblue {
+background-image: url('/frameworkfiles/images/icons/backgradientblue.jpg');
+background-repeat: repeat-x; padding: 4px; color: #ffffff; background-color: #18215c;
+}
+
+.backgradientburgundy {
+background-image: url('/frameworkfiles/images/icons/backgradientburgundy.jpg');
+background-repeat: repeat-x; padding: 4px; color: #ffffff; background-color: #540b28;
+}
+
+.backgradientgreen {
+background-image: url('/frameworkfiles/images/icons/backgradientgreen.jpg');
+background-repeat: repeat-x; padding: 4px; color: #ffffff; background-color: #081406;
+}
+
+.backgradientlightbrown {
+background-image: url('/frameworkfiles/images/icons/backgradientlightbrown.jpg');
+background-repeat: repeat-x; padding: 4px; color: #ffffff; background-color: #57260b;
+}
+
+.backgradientdarkbrown {
+background-image: url('/frameworkfiles/images/icons/backgradientdarkbrown.jpg');
+background-repeat: repeat-x; padding: 4px; color: #ffffff; background-color: #322715;
+}
+
+.backgradientdarkgrey {
+background-image: url('/frameworkfiles/images/icons/backgradientdarkgrey.jpg');
+background-repeat: repeat-x; padding: 4px; color: #ffffff; background-color: #262626;
+}
+
+.backgradientgold {
+background-image: url('/frameworkfiles/images/icons/backgradientgold.jpg');
+background-repeat: repeat-x; padding: 4px; color: #ffffff; background-color: #483701;
+}
+
+.backgradientlightgrey {
+background-image: url('/frameworkfiles/images/icons/backgradientlightgrey.jpg');
+background-repeat: repeat-x; padding: 4px; color: #222222; background-color: #808080;
+}
+
+.backgradientolive {
+background-image: url('/frameworkfiles/images/icons/backgradientolive.jpg');
+background-repeat: repeat-x; padding: 4px; color: #ffffff; background-color: #30300f;
+}
+
+.backgradientpurple {
+background-image: url('/frameworkfiles/images/icons/backgradientpurple.jpg');
+background-repeat: repeat-x; padding: 4px; color: #ffffff; background-color: #460046;
+}
+
+.backgradienttan {
+background-image: url('/frameworkfiles/images/icons/backgradienttan.jpg');
+background-repeat: repeat-x; padding: 4px; color: #ffffff; background-color: #573920;
+}
+
+.backgradientteal {
+background-image: url('/frameworkfiles/images/icons/backgradientteal.jpg');
+background-repeat: repeat-x; padding: 4px; color: #ffffff; background-color: #1d3551;
+}
+
+/*---- Headbackground is a generic builder for a header with a colored background. Use it with the color (for text) and bgxxxx colors in the lines above to create your own heading boxes ----*/
+.headbackground { width: 98%;  font-size: 110%; padding-left: 5px; padding-bottom: 3px; padding-top: 3px; font-weight: bold; margin-bottom:15px;  margin-top:30px; }
+
