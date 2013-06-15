@@ -85,6 +85,9 @@ var size = function() {
 
     graph.height(gnewh);
 
+    var contentbox = $('#mainbody')
+    contentbox.height($('#levelcolumn').outerHeight());
+
     var radarbox = $('#radarbox')
     var radarimg = $('#radarbox img')
     
@@ -130,7 +133,7 @@ var checkdate = function() {
     // getTime provides milliseconds from UTC epoch. Our generated time is in seconds since the epoch, so divide by 1000.
     var current = (new Date()).getTime() / 1000;
     var difference = current - generated;
-    if (difference > 900) {
+    if (difference > 1200) {
         if ($('#error').length == 0) {
             $('#contentFrame').prepend('<div id="error">' + errormsg + '</div>');
         }
