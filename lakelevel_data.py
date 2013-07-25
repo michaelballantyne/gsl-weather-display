@@ -54,7 +54,7 @@ class LevelDataProvider(DataProvider):
 
         level_date_str = common_dates[-1]
         level_date = datetime.datetime.strptime(level_date_str, "%Y-%m-%d %H:%M")
-        result["date"] = level_date.strftime("%b %-d, %Y");
+        result["date"] = level_date.strftime("%b %d, %Y");
         
 
         return result
