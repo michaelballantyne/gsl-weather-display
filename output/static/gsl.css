@@ -71,10 +71,12 @@ div#legend {
 
 div#legend li.south {
     color: #2a9338;
+    list-style: square;
 }
 
 div#legend li.north {
     color: #AD1F00;
+    list-style: square;
 }
 
 div#legend span {
